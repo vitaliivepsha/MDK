@@ -1,0 +1,23 @@
+.breadcrumbs {
+  margin-top: 16px;
+  & a,
+  & span {
+    font-size: 10px;
+    line-height: 12px;
+    color: #4d4c4c;
+    text-decoration: none;
+  }
+
+  & a {
+    opacity: 0.8;
+  }
+
+  & a:hover {
+    opacity: 1;
+  }
+
+  & a:after {
+    content: " / ";
+    opacity: 1;
+  }
+}
