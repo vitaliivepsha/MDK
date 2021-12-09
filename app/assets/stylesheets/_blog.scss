@@ -54,7 +54,7 @@
   width: 100%;
   position: relative;
   @include bp(xs){
-    min-width: calc(81vw - 30px);
+    min-height: calc(81vw - 30px);
   }
   &:hover{
     color: #fff;
