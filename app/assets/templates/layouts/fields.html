@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>MDK</title>
+  <link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon.png" type="image/png">
+  <meta name="theme-color" content="#E53100">
+  <meta name="msapplication-navbutton-color" content="#E53100">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#E53100">
+</head>
+
+<body>
+
+  ${require('../parts/header.html')}
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="javascript:void(0)">Главная</a>
+      <span>Месторождения</span>
+    </nav>
+  </div>
+  <main class="main fields">
+    <div class="container">
+      <div class="fields-head">
+        <h1>Месторождения</h1>
+        <div class="fields-controls">
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <span>Цвет:</span>
+              <div>
+                <span class="dropdown-name">Все</span>
+              </div>
+              <i></i>
+            </div>
+            <div class="dropdown-list">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Серый</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Коричневый</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Зелёный</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Чёрный</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Красный</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Белый</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Розовый</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Оранжевый</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span class="dropdown-color">
+                      <picture>
+                        <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                        <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                        <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                      </picture>
+                    </span>
+                    <span>Синий</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown-wrapper">
+            <div class="dropdown">
+              <span>Регион:</span>
+              <div>
+                <span class="dropdown-name">Все</span>
+              </div>
+              <i></i>
+            </div>
+            <div class="dropdown-list">
+              <ul>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Урал</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Украина</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Карелия</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">
+                    <span>Казахстан</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row fields-wrapper">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Южно-Султаевское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Исетское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Емельяновское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Южно-Султаевское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Исетское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Емельяновское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Южно-Султаевское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Исетское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="fields-item">
+            <a href="javascript:void(0)" class="fields-item__pic">
+              <picture>
+                <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+              </picture>
+            </a>
+            <a href="javascript:void(0)" class="fields-item__name">Емельяновское</a>
+            <div class="fields-item__colors">
+              <span>Карелия</span>
+              <div>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+                <span class="color">
+                  <picture>
+                    <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
+                    <source srcset="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy-web" type="image/jpg">
+                    <img src="../../images/pixel.jpg" data-original="../../images/blog-01.jpg" class="lazy" alt="">
+                  </picture>
+                </span>
+              </div>
+            </div>
+            <div class="fields-item__descr">
+              Eмельяновский гранит: оригинальный природный камень оранжевого цвета Один из самых интересных природных камней –
+            </div>
+            <div class="fields-item__footer">
+              <div>
+                <a href="javascript:void(0)" class="fields-item__more">Подробнее о месторождении >></a>
+                <a href="javascript:void(0)" class="fields-item__btn">Изделия</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fields-footer">
+        <ul class="pagination">
+          <li class="prev disabled">
+            <span><</span>
+          </li>
+          <li class="current">
+            <span>1</span>
+          </li>
+          <li>
+            <a href="javascript:void(0)">2</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">3</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">...</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">8</a>
+          </li>
+          <li class="next">
+            <a href="javascript:void(0)">></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  ${require('../parts/footer.html')}
+
+  <div class="overlay"></div>
+
+</body>
+
+</html>

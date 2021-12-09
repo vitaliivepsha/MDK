@@ -10,6 +10,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/reviews.html');
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/article.html');
+    require('./assets/templates/layouts/fields.html');
+    require('./assets/templates/layouts/fields-chosen.html');
 }
 
 // Depends
@@ -78,6 +80,24 @@ $(function () {
         } else {
             $labelText.text(labelDefault);
         }
+    });
+
+    // dropdown
+
+    $('.dropdown').click(function() {
+        $(this).closest('.dropdown-wrapper').toggleClass('open').siblings().removeClass('open');
+    });
+
+    $(document).click(function() {
+        $('.dropdown-wrapper').removeClass('open');
+    });
+
+    $(document).on('click', '.dropdown', function(e) {
+        e.stopPropagation();
+    });
+
+    $(document).on('click', '.dropdown-list', function(e) {
+        e.stopPropagation();
     });
 });
 
