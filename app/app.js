@@ -8,6 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/product.html');
     require('./assets/templates/layouts/reviews.html');
+    require('./assets/templates/layouts/blog.html');
 }
 
 // Depends

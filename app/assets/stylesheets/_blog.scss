@@ -1,0 +1,148 @@
+.blog{
+  padding: 28px 0 86px;
+  @include bp(xs){
+    padding-top: 10px;
+  }
+}
+
+.blog-main{
+  h1{
+    margin: 0;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+}
+
+.blog-wrapper{
+  display: flex;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
+  margin-top: 45px;
+  @include bp(sm){
+    margin: 30px -10px 0;
+  }
+  @include bp(xs){
+    margin-top: 10px;
+  }
+  .col-xs-12{
+    height: inherit;
+    margin-bottom: 30px;
+    @include bp(sm){
+      padding: 0 10px;
+      margin-bottom: 20px;
+      width: 50%;
+    }
+    @include bp(xs){
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.blog-item{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  min-height: 230px;
+  width: 100%;
+  position: relative;
+  @include bp(xs){
+    min-width: calc(81vw - 30px);
+  }
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.35);
+    >picture{
+      &:after{
+        opacity: 1;
+      }
+    }
+  }
+  >picture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    &:after{
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+      transition: linear .2s;
+      background: rgba(229, 49, 0, 0.6);
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  >div{
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 25px 22px 17px 29px;
+    @include bp(xs){
+      padding: 25px 10px 15px 20px;
+    }
+  }
+}
+
+.blog-item__title{
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 26px;
+  display: block;
+  margin-bottom: 16px;
+  @include bp(xxs){
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.blog-item__descr{
+  max-height: 84px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 22px;
+  @include bp(xs){
+    margin-bottom: 16px;
+  }
+}
+
+.blog-item__date{
+  text-align: right;
+  font-size: 10px;
+  line-height: 12px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.blog-footer{
+  margin-top: 50px;
+  @include bp(xs){
+    margin-top: 30px;
+  }
+}
