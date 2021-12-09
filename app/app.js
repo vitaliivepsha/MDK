@@ -7,6 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/about.html');
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/product.html');
+    require('./assets/templates/layouts/reviews.html');
 }
 
 // Depends
@@ -61,6 +62,21 @@ $(function () {
         });
     };
     $(window).scroll(lazyload);
+
+    // upload file
+
+    $(document).on('change', '.input-file input', function() {
+        var $file = $(this),
+            $label = $file.next('label'),
+            $labelText = $label.find('span'),
+            labelDefault = $labelText.text(),
+            fileName = $file.val().split( '\\' ).pop();
+        if ( fileName ) {
+            $labelText.text(fileName);
+        } else {
+            $labelText.text(labelDefault);
+        }
+    });
 });
 
 

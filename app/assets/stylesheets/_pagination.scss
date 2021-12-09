@@ -1,0 +1,52 @@
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  li{
+    margin: 0 3px;
+    a, span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      color: $black;
+      text-decoration: none;
+      &:hover{
+        background-color: transparent;
+        color: $accent;
+      }
+    }
+    &.current{
+      a, span{
+        color: $accent;
+        text-decoration: underline;
+        cursor: default;
+      }
+    }
+    &.disabled{
+      cursor: default;
+      a, span{
+        color: $gray-dark;
+        text-decoration: none;
+        cursor: default;
+        background-color: transparent;
+        &:hover{
+          background-color: transparent;
+        }
+      }
+    }
+    &.prev{
+      margin-right: 15px;
+    }
+    &.next{
+      margin-left: 15px;
+    }
+  }
+}

@@ -127,6 +127,9 @@ main {
     pointer-events: all;
     font-family: $default;
     font-weight: 400;
+    @include bp(xs){
+      position: static;
+    }
   }
 }
 
@@ -168,6 +171,53 @@ main {
   }
 }
 
+.input{
+  height: 46px;
+  width: 100%;
+  border: 1px solid rgba($gray-dark, 0.5);
+  padding: 0 16px;
+  color: $black;
+  font-size: 12px;
+  line-height: 15px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  &::placeholder{
+    color: rgba($black, 0.7);
+  }
+  &:focus{
+    &::placeholder{
+      color: transparent;
+    }
+  }
+}
+
+.textarea{
+  height: 46px;
+  width: 100%;
+  border: 1px solid rgba($gray-dark, 0.5);
+  padding: 16px;
+  color: $black;
+  font-size: 12px;
+  line-height: 15px;
+  resize: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  &::placeholder{
+    color: rgba($black, 0.7);
+  }
+  &:focus{
+    &::placeholder{
+      color: transparent;
+    }
+  }
+}
+
 ::selection {
   background: rgba($accent, 0.5);
   color: #fff;
@@ -178,6 +228,8 @@ main {
 @import "header";
 // Breadcrumbs
 @import "breadcrumbs";
+// Pagination
+@import "pagination";
 
 // Contacts
 @import "contacts";
@@ -185,6 +237,8 @@ main {
 @import "about";
 // Product
 @import "product";
+// Reviews
+@import "reviews";
 
 // Main
 @import "main/section-1";

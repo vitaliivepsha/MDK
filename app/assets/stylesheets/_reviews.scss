@@ -1,0 +1,269 @@
+.reviews{
+  padding: 45px 0 105px;
+  @include bp(sm){
+    padding-top: 25px;
+  }
+  @include bp(xs){
+    padding-top: 10px;
+  }
+}
+
+.reviews-top{
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 45px;
+  @include bp(sm){
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  @include bp(xs){
+    margin-bottom: 20px;
+  }
+  h1{
+    margin: 0;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 30px;
+    }
+  }
+  span{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    padding: 0 25px 0 35px;
+    @include bp(sm){
+      padding-left: 20px;
+      padding-right: 0;
+    }
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 30px;
+      padding-left: 4px;
+    }
+  }
+  small{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $accent;
+    text-decoration: underline;
+    top: -5px;
+    position: relative;
+    @include bp(sm){
+      width: 100%;
+      text-align: left;
+      top: auto;
+      margin-top: 5px;
+    }
+    @include bp(xs){
+      margin-top: 10px;
+      text-decoration: none;
+    }
+    &:hover{
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}
+
+.reviews-wrapper{
+  border-top: 1px solid rgba(77, 76, 76, 0.2);
+}
+
+.review-item{
+  border-bottom: 1px solid rgba(77, 76, 76, 0.2);
+  padding: 30px 50px 30px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  @include bp(sm){
+    padding: 20px 0;
+  }
+  @include bp(xs){
+    padding: 25px 0 30px;
+  }
+}
+
+.review-pic{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  @include bp(xs){
+    width: 100%;
+    height: calc(72vw - 30px);
+  }
+  picture{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.review-info{
+  width: calc(100% - 200px);
+  padding-left: 62px;
+  padding-top: 18px;
+  @include bp(sm){
+    padding-left: 30px;
+    padding-top: 0;
+  }
+  @include bp(xs){
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+  .rating-stars{
+    margin-bottom: 30px;
+    @include bp(sm){
+      margin-bottom: 20px;
+    }
+    @include bp(xs){
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.review-date{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 10px;
+  line-height: 12px;
+  @include bp(xs){
+    margin-bottom: 10px;
+  }
+}
+
+.review-descr{
+  font-size: 14px;
+  line-height: 150%;
+  color: $gray-dark;
+  margin-bottom: 20px;
+  @include bp(xs){
+    margin-bottom: 10px;
+  }
+  *{
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.rating-author{
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.rating-stars{
+  display: flex;
+  .rating-star{
+    margin-right: 5px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+
+.rating-star{
+  display: flex;
+  &:before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    -webkit-mask: url("../images/icons/star-empty.svg");
+    mask: url("../images/icons/star-empty.svg");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    background-color: $accent;
+  }
+  &.active{
+    &:before{
+      -webkit-mask: url("../images/icons/star-full.svg");
+      mask: url("../images/icons/star-full.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+    }
+  }
+}
+
+.rating > input ~ label {
+  cursor: pointer;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  display: block;
+  content: '';
+  width: 14px;
+  height: 14px;
+  -webkit-mask: url("../images/icons/star-empty.svg");
+  mask: url("../images/icons/star-empty.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: $accent;
+  margin-right: 5px;
+}
+
+.rating > label {
+  width: auto;
+  float: right;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.rating:not(:checked) > label:hover:before,
+.rating:not(:checked) > label:hover ~ label:before,
+.rating > input:checked + label:hover:before,
+.rating > input:checked ~ label:before,
+.rating > input:checked ~ label:hover:before,
+.rating > input:checked ~ label:hover ~ label:before,
+.rating > label:hover ~ input:checked ~ label:before {
+  -webkit-mask: url("../images/icons/star-full.svg");
+  mask: url("../images/icons/star-full.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.rating > input:checked ~ label:before {
+  -webkit-mask: url("../images/icons/star-full.svg");
+  mask: url("../images/icons/star-full.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.reviews-footer{
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+}

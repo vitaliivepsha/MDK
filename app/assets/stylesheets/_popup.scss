@@ -1,22 +1,37 @@
 .mfp-bg{
-  background: rgba(17, 17, 17, 0.5);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 
 .popup{
   position: relative;
   margin: 0 auto;
-  width: 536px;
   max-width: calc(100vw - 30px);
   background: #fff;
-  padding: 60px 54px 54px;
+  box-shadow: 0 0 30px rgba(17, 17, 17, 0.2);
   max-height: 100vh;
   overflow: auto;
+  &.reviews-popup{
+    width: 960px;
+    padding: 68px 62px 100px;
+    @include bp(sm){
+      padding: 50px 30px;
+    }
+    @include bp(xs){
+      padding: 40px 15px 30px;
+    }
+    .popup-title{
+      margin-bottom: 28px;
+      @include bp(xs){
+        margin-bottom: 24px;
+      }
+    }
+  }
   .mfp-close{
     width: 24px;
     height: 24px;
-    right: 26px;
-    top: 26px;
+    right: 30px;
+    top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,8 +39,8 @@
     opacity: 1;
     cursor: pointer;
     @include bp(xs){
-      right: 15px;
-      top: 28px;
+      right: 10px;
+      top: 10px;
     }
     svg{
       pointer-events: none;
@@ -36,12 +51,130 @@
     &:hover{
       svg{
         path{
+          fill: $accent;
         }
       }
     }
   }
 }
 
+.popup-title{
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  @include bp(xs){
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
+.reviews-popup__rating{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 42px;
+  @include bp(xs){
+    margin-bottom: 30px;
+  }
+  >span{
+    margin-right: 25px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.reviews-popup__form{
+  .textarea{
+    height: 112px;
+    @include bp(xs){
+      height: 122px;
+    }
+  }
+  .btn{
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+    width: 402px;
+    max-width: 100%;
+    margin: 35px auto 0;
+    @include bp(xs){
+      margin-top: 25px;
+    }
+  }
+}
+
+.reviews-popup__form-wrapper{
+  display: flex;
+  justify-content: space-between;
+  @include bp(xs){
+    flex-direction: column;
+  }
+  >div{
+    width: calc(50% - 15px);
+    @include bp(xs){
+      width: 100%;
+    }
+    .input-wrapper{
+      margin-bottom: 20px;
+      @include bp(xs){
+        margin-bottom: 10px;
+      }
+      &:last-child{
+        margin-bottom: 0;
+        @include bp(xs){
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.reviews-popup__form-upload{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  @include bp(xs){
+    margin-top: 0;
+  }
+  .input-file{
+    cursor: pointer;
+    width: 345px;
+    max-width: 100%;
+    >label{
+      font-weight: 400;
+      margin-bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        svg{
+          path{
+            fill: $accent;
+          }
+        }
+        span{
+          color: $accent;
+        }
+      }
+      >svg{
+        min-width: 11px;
+        margin-right: 15px;
+      }
+      span{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: $gray-dark;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    input{
+      display: none;
+    }
+  }
+}
 
 .swal2-modal{
   width: 536px;
@@ -58,20 +191,20 @@
     padding: 60px 26px !important;
   }
   .swal2-title{
-    //font-family: $title !important;
-    font-size: 28px;
-    line-height: 32px;
+    font-family: $default !important;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
     display: block;
     text-align: center;
     margin-bottom: 15px;
-    color: #000;
+    color: $black;
     position: relative;
-    font-weight: 400;
   }
   .swal2-content{
-    //font-family: $default !important;
+    font-family: $default !important;
     font-weight: normal;
-    color: #000;
+    color: $black;
     font-size: 15px;
     line-height: 24px;
     text-align: center;
