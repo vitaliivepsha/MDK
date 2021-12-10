@@ -1,5 +1,8 @@
 .breadcrumbs {
   margin-top: 16px;
+  @include bp(xs){
+    line-height: 1;
+  }
   & a,
   & span {
     font-size: 10px;

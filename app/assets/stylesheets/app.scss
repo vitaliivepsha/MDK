@@ -146,7 +146,7 @@ main {
   background-color: $accent;
   cursor: pointer;
   transition: linear 0.2s;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
@@ -216,6 +216,19 @@ main {
       color: transparent;
     }
   }
+  &::-webkit-scrollbar {
+    overflow-y: scroll;
+    background: transparent;
+    width: 4px;
+    transition: linear .2s;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $gray-dark;
+    border-radius: 0;
+    width: 4px;
+    transition: linear .2s;
+    cursor: grab;
+  }
 }
 
 ::selection {
@@ -226,10 +239,15 @@ main {
 
 // Header
 @import "header";
+
 // Breadcrumbs
 @import "breadcrumbs";
 // Pagination
 @import "pagination";
+// Text
+@import "text";
+// Consultation
+@import "consultation";
 
 // Contacts
 @import "contacts";
@@ -245,6 +263,8 @@ main {
 @import "article";
 // Fields
 @import "fields";
+// Field
+@import "field";
 
 // Main
 @import "main/section-1";

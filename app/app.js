@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/article.html');
     require('./assets/templates/layouts/fields.html');
     require('./assets/templates/layouts/fields-chosen.html');
+    require('./assets/templates/layouts/field.html');
 }
 
 // Depends
