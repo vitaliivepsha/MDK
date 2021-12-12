@@ -117,6 +117,7 @@
   line-height: 44px;
   display: block;
   margin-bottom: 10px;
+  max-width: 420px;
   @include bp(xs){
     font-size: 21px;
     line-height: 26px;

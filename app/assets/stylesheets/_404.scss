@@ -1,0 +1,81 @@
+.nf-main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 75px 0 175px;
+  @include bp(md){
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+  }
+  @include bp(xs){
+    padding: 40px 0 65px;
+  }
+}
+
+.nf-text{
+  padding-top: 8px;
+  padding-left: 65px;
+  @include bp(md){
+    padding: 0;
+    margin: 0 auto 40px;
+    width: 420px;
+    max-width: 100%;
+  }
+  >picture{
+    display: block;
+    max-width: 100%;
+    margin-bottom: 40px;
+    img{
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+  >span{
+    display: block;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 18px;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+  }
+  >p{
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 13px;
+    max-width: 420px;
+    @include bp(xs){
+      margin-bottom: 10px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    a{
+      color: $accent;
+      text-decoration: underline;
+      &:hover{
+        color: $accent;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.nf-pic{
+  display: flex;
+  justify-content: flex-end;
+  @include bp(md){
+    justify-content: center;
+  }
+  >picture{
+    display: block;
+    max-width: 100%;
+    img{
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
+}
