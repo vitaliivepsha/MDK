@@ -188,14 +188,15 @@
       overflow: auto;
       &::-webkit-scrollbar {
         overflow-y: scroll;
-        background: transparent;
-        width: 4px;
+        background: #E5E5E5;
+        border-radius: 1px;
+        width: 3px;
         transition: linear .2s;
       }
       &::-webkit-scrollbar-thumb {
         background: $gray-dark;
-        border-radius: 0;
-        width: 4px;
+        border-radius: 1px;
+        width: 3px;
         transition: linear .2s;
         cursor: grab;
       }

@@ -25,6 +25,13 @@ body {
   @include bp(md) {
     display: block;
   }
+  &.opened-filters{
+    height: 100vh;
+    overflow: hidden;
+    .mobile-filters{
+      display: block;
+    }
+  }
   &.swal2-shown {
     position: static;
   }
@@ -218,14 +225,15 @@ main {
   }
   &::-webkit-scrollbar {
     overflow-y: scroll;
-    background: transparent;
-    width: 4px;
+    background: #E5E5E5;
+    border-radius: 1px;
+    width: 3px;
     transition: linear .2s;
   }
   &::-webkit-scrollbar-thumb {
     background: $gray-dark;
-    border-radius: 0;
-    width: 4px;
+    border-radius: 1px;
+    width: 3px;
     transition: linear .2s;
     cursor: grab;
   }
@@ -248,8 +256,6 @@ main {
 @import "text";
 // Consultation
 @import "consultation";
-// 404
-@import "404";
 
 // Contacts
 @import "contacts";
@@ -267,6 +273,10 @@ main {
 @import "fields";
 // Field
 @import "field";
+// Catalog
+@import "catalog";
+// 404
+@import "404";
 
 // Main
 @import "main/section-1";
