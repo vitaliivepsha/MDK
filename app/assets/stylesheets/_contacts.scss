@@ -1,32 +1,41 @@
 .contacts {
   & h1 {
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 55px;
-    padding-bottom: 22px;
+    margin-top: 28px;
+    margin-bottom: 35px;
     font-size: 36px;
     line-height: 44px;
     color: $black;
-    border-bottom: 1px solid $accent;
+    @include bp(xs){
+      font-size: 21px;
+      line-height: 26px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
   }
-
   & .location-section {
     padding-bottom: 85px;
+    @include bp(xs){
+      padding-bottom: 50px;
+    }
   }
-
   & .location {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: 125px;
+    gap: 65px;
     margin-bottom: 20px;
-
+    @include bp(xs){
+      gap: 20px;
+      margin-bottom: 0;
+    }
     &__map {
       position: relative;
       max-width: 445px;
       max-height: 300px;
       overflow: hidden;
-
+      @include bp(xs){
+        width: 100%;
+        height: calc(70vw - 30px);
+      }
       & img {
         position: absolute;
         top: 0;
@@ -36,14 +45,21 @@
         z-index: -1;
         object-fit: cover;
       }
-
       & iframe {
         border: none;
+        @include bp(xs){
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
     &__address {
+      padding-top: 12px;
       position: relative;
+      @include bp(xs){
+        padding-top: 0;
+      }
       & h3 {
         margin: 0;
         margin-bottom: 30px;
@@ -51,14 +67,11 @@
         line-height: 32px;
         font-weight: 500;
         color: $black;
+        @include bp(xs){
+          font-size: 21px;
+          line-height: 26px;
+        }
       }
-
-      & > svg {
-        position: absolute;
-        right: 89px;
-        bottom: -91px;
-      }
-
       & > p {
         margin: 0;
         margin-bottom: 30px;
@@ -66,7 +79,9 @@
         line-height: 20px;
         font-weight: 500;
         color: $black;
-
+        @include bp(xs){
+          margin-bottom: 15px;
+        }
         & svg {
           margin-right: 13px;
         }
@@ -77,6 +92,9 @@
       display: flex;
       flex-wrap: wrap;
       gap: 50px;
+      @include bp(xs){
+        gap: 15px;
+      }
     }
 
     &__item {
@@ -114,14 +132,16 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 470px;
-
+    margin-top: 20px;
+    @include bp(xs){
+      margin-top: 30px;
+    }
     & li {
       width: 25px;
       height: 25px;
       margin-right: 10px;
       margin-bottom: 10px;
       transition: 0.3s;
-
       &:hover {
         opacity: 0.7;
       }
@@ -129,26 +149,50 @@
   }
 
   & .other-section {
-    padding: 75px 0;
-    background-color: #fff;
-
+    padding: 85px 0 100px;
+    background-color: $black;
+    @include bp(xs){
+      padding: 45px 0;
+    }
+    .other__parts{
+      padding-top: 10px;
+      @include bp(xs){
+        padding: 0;
+      }
+    }
     & p {
       width: fit-content;
-      margin: 0;
-      margin-bottom: 40px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid $accent;
-      font-size: 21px;
-      line-height: 26px;
+      margin-bottom: 52px;
+      font-size: 30px;
+      line-height: 37px;
       font-weight: 500;
-      color: $black;
+      color: #fff;
+      position: relative;
+      @include bp(xs){
+        font-size: 21px;
+        line-height: 26px;
+        margin-bottom: 60px;
+      }
+      &:after{
+        position: absolute;
+        content: '';
+        width: 87px;
+        height: 2px;
+        left: 0;
+        top: calc(100% + 17px);
+        background-color: #fff;
+        @include bp(xs){
+          top: calc(100% + 28px);
+        }
+      }
     }
-
     & li {
       display: flex;
       align-items: center;
       margin-bottom: 10px;
-
+      @include bp(xs){
+        margin-bottom: 15px;
+      }
       &::before {
         content: "";
         width: 7px;
@@ -158,22 +202,42 @@
         background-color: $accent;
       }
     }
-
     & li a {
-      display: block;
+      display: flex;
+      align-items: center;
       font-size: 16px;
       line-height: 20px;
-      color: $black;
+      color: #fff;
       text-decoration: none;
+      &:after{
+        content: '>>';
+        color: $accent;
+        margin-left: 10px;
+      }
       &:hover {
         color: $accent;
       }
     }
-
     & .other {
       display: flex;
       flex-wrap: wrap;
-      gap: 130px;
+      gap: 30px;
+    }
+    .other__img{
+      width: 546px;
+      height: 367px;
+      @include bp(md){
+        margin: 0 auto;
+      }
+      @include bp(xs){
+        width: calc(100vw - 30px);
+        height: calc(70vw - 30px);
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 }

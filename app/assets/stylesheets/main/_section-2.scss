@@ -1,9 +1,15 @@
+.products-section{
+  overflow-x: hidden;
+}
+
 .products {
-  // display: none;
-
-  padding: 140px 0;
-  padding-bottom: 150px;
-
+  padding: 140px 0 150px;
+  @include bp(md){
+    padding: 80px 0;
+  }
+  @include bp(sm){
+    padding: 40px 0;
+  }
   &.marble {
     background-color: #f0f0f0;
     & .products__pic {
@@ -31,6 +37,9 @@
       z-index: -1;
       width: 1036px;
       height: 430px;
+      @include bp(md){
+        display: none;
+      }
 
       & img {
         width: 100%;
@@ -46,7 +55,9 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 22px;
-
+    @include bp(xs){
+      margin-bottom: 20px;
+    }
     & h2 {
       display: flex;
       align-items: center;
@@ -55,7 +66,10 @@
       line-height: 32px;
       font-weight: 500;
       color: $black;
-
+      @include bp(xs){
+        font-size: 18px;
+        line-height: 22px;
+      }
       &::before {
         content: "";
         display: block;
@@ -64,6 +78,10 @@
         width: 10px;
         height: 10px;
         background-color: $accent;
+        @include bp(xs){
+          width: 7px;
+          height: 7px;
+        }
       }
     }
 
@@ -74,7 +92,29 @@
       line-height: 15px;
       font-weight: 500;
       color: $black;
+      @include bp(sm){
+        display: none;
+      }
       & svg {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__bot {
+    display: none;
+    margin-top: 25px;
+    @include bp(sm){
+      display: block;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 500;
+      color: $black;
+      svg {
         margin-right: 10px;
       }
     }
@@ -93,8 +133,9 @@
       max-width: 540px;
     }
 
-    @media (max-width: 569px) {
-      justify-content: center;
+    @include bp(xs){
+      max-width: unset;
+      gap: 10px;
     }
 
     & li div {
@@ -107,12 +148,19 @@
 
     & a {
       text-decoration: none;
+      width: 255px;
+      height: 255px;
+      display: block;
+      position: relative;
+      @include bp(xs){
+        width: calc(50vw - 20px);
+        height: calc(50vw - 20px);
+      }
     }
 
     & div {
-      width: 255px;
-      height: 255px;
-      margin-bottom: 10px;
+      width: 100%;
+      height: 100%;
       & img {
         width: 100%;
         height: 100%;
@@ -126,6 +174,28 @@
       line-height: 20px;
       font-weight: 400;
       color: $black;
+      position: absolute;
+      left: 19px;
+      bottom: 19px;
+      width: calc(100% - 38px);
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5px 10px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+      @include bp(xs){
+        height: 30px;
+        padding: 3px 5px;
+        left: 10px;
+        bottom: 10px;
+        width: calc(100% - 20px);
+        font-size: 12px;
+        line-height: 15px;
+      }
+
     }
   }
 }
