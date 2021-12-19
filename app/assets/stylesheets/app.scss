@@ -25,10 +25,10 @@ body {
   @include bp(md) {
     display: block;
   }
-  &.opened-filters{
+  &.opened-filters {
     height: 100vh;
     overflow: hidden;
-    .mobile-filters{
+    .mobile-filters {
       display: block;
     }
   }
@@ -134,7 +134,7 @@ main {
     pointer-events: all;
     font-family: $default;
     font-weight: 400;
-    @include bp(xs){
+    @include bp(xs) {
       position: static;
     }
   }
@@ -178,7 +178,7 @@ main {
   }
 }
 
-.input{
+.input {
   height: 46px;
   width: 100%;
   border: 1px solid rgba($gray-dark, 0.5);
@@ -191,17 +191,17 @@ main {
   border-radius: 0;
   -webkit-appearance: none;
   appearance: none;
-  &::placeholder{
+  &::placeholder {
     color: rgba($black, 0.7);
   }
-  &:focus{
-    &::placeholder{
+  &:focus {
+    &::placeholder {
       color: transparent;
     }
   }
 }
 
-.textarea{
+.textarea {
   height: 46px;
   width: 100%;
   border: 1px solid rgba($gray-dark, 0.5);
@@ -215,26 +215,26 @@ main {
   border-radius: 0;
   -webkit-appearance: none;
   appearance: none;
-  &::placeholder{
+  &::placeholder {
     color: rgba($black, 0.7);
   }
-  &:focus{
-    &::placeholder{
+  &:focus {
+    &::placeholder {
       color: transparent;
     }
   }
   &::-webkit-scrollbar {
     overflow-y: scroll;
-    background: #E5E5E5;
+    background: #e5e5e5;
     border-radius: 1px;
     width: 3px;
-    transition: linear .2s;
+    transition: linear 0.2s;
   }
   &::-webkit-scrollbar-thumb {
     background: $gray-dark;
     border-radius: 1px;
     width: 3px;
-    transition: linear .2s;
+    transition: linear 0.2s;
     cursor: grab;
   }
 }
@@ -243,6 +243,14 @@ main {
   background: rgba($accent, 0.5);
   color: #fff;
   text-shadow: none;
+}
+
+.tabs-caption-item {
+  cursor: pointer;
+  &.active {
+    pointer-events: none;
+    cursor: default;
+  }
 }
 
 // Header

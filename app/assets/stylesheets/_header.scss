@@ -46,15 +46,15 @@
     font-size: 26px;
     line-height: 36px;
   }
-  img{
+  img {
     width: 143px;
     height: 60px;
     object-fit: contain;
-    @include bp(sm){
+    @include bp(sm) {
       width: 105px;
       height: 44px;
     }
-    @include bp(xxs){
+    @include bp(xxs) {
       height: 39px;
       width: 90px;
     }
@@ -648,21 +648,23 @@
     position: absolute;
     right: 0;
     @media (max-width: 1199px) {
-      right: 25%;
+      right: 22%;
     }
     @media (max-width: 991px) {
-      right: 18%;
+      right: 15%;
     }
   }
   & form {
     display: none;
+    width: 100%;
     max-width: 385px;
     height: 45px;
     border-radius: 7px;
     overflow: hidden;
     box-shadow: 0 10px 10px rgba($black, 0.2);
-
-    width: 100%;
+    @media (max-width: 1199px) {
+      max-width: 400px;
+    }
     & input {
       flex-grow: 1;
       height: 45px;
@@ -861,8 +863,9 @@
       display: block;
     }
   }
-  &.mm-lvl2, &.mm-lvl3{
-    .mobile-menu__bot{
+  &.mm-lvl2,
+  &.mm-lvl3 {
+    .mobile-menu__bot {
       display: none;
     }
   }
@@ -880,53 +883,54 @@
   padding-top: 80px;
   overflow-y: auto;
   background-color: #f6f6f6;
-  @include bp(sm){
+  @include bp(sm) {
     padding-top: 60px;
   }
-  .container{
+  .container {
     height: 100%;
   }
 }
 
-.mobile-menu__lvl1{
+.mobile-menu__lvl1 {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.mobile-menu__top{
+.mobile-menu__top {
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
-.mobile-menu__list{
-  >li{
-    &.has-children{
-      &.lvl1{
-        >span{
-          >i{
+.mobile-menu__list {
+  > li {
+    &.has-children {
+      &.lvl1 {
+        > span {
+          > i {
             display: flex;
           }
         }
       }
     }
-    >span{
+    > span {
       display: flex;
       align-items: center;
       padding: 8px 0;
-      >a{
+      > a {
         display: block;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
         color: $black;
         text-decoration: none;
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
           color: $black;
           text-decoration: none;
         }
       }
-      >i{
+      > i {
         width: 16px;
         height: 16px;
         display: none;
@@ -935,8 +939,8 @@
         margin-left: 18px;
         position: relative;
         bottom: -2px;
-        &:before{
-          content: '';
+        &:before {
+          content: "";
           border-left: 6px solid $accent;
           border-top: 4px solid transparent;
           border-bottom: 4px solid transparent;
@@ -946,7 +950,7 @@
   }
 }
 
-.mobile-menu__lvl2{
+.mobile-menu__lvl2 {
   display: none;
   position: fixed;
   z-index: 2;
@@ -955,15 +959,15 @@
   bottom: 0;
   overflow: auto;
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding: 5px 0 20px 30px;
-  @include bp(sm){
+  @include bp(sm) {
     top: 60px;
   }
-  &.show{
+  &.show {
     display: block;
   }
-  >.menu-back{
+  > .menu-back {
     display: block;
     padding: 20px 0;
     position: relative;
@@ -972,9 +976,9 @@
     line-height: 20px;
     color: $accent;
     border-bottom: 1px solid rgba(77, 76, 76, 0.2);
-    &:before{
+    &:before {
       position: absolute;
-      content: '';
+      content: "";
       border-right: 6px solid $accent;
       border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
@@ -983,40 +987,41 @@
       right: calc(100% + 10px);
     }
   }
-  >ul{
-    >li{
+  > ul {
+    > li {
       border-bottom: 1px solid rgba(77, 76, 76, 0.2);
-      &.has-children{
-        >span{
-          >i{
+      &.has-children {
+        > span {
+          > i {
             display: flex;
           }
         }
       }
-      >span{
+      > span {
         padding: 15px 15px 18px 0;
         display: flex;
         align-items: center;
-        >a{
+        > a {
           font-size: 14px;
           line-height: 17px;
           font-weight: 500;
           color: $black;
           text-decoration: none;
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             color: $black;
             text-decoration: none;
           }
         }
-        >i{
+        > i {
           height: 16px;
           display: none;
           align-items: center;
           justify-content: flex-end;
           margin-left: 18px;
           flex: 1 0 auto;
-          &:before{
-            content: '';
+          &:before {
+            content: "";
             border-left: 6px solid $accent;
             border-top: 4px solid transparent;
             border-bottom: 4px solid transparent;
@@ -1027,7 +1032,7 @@
   }
 }
 
-.mobile-menu__lvl3{
+.mobile-menu__lvl3 {
   display: none;
   position: fixed;
   z-index: 3;
@@ -1036,15 +1041,15 @@
   bottom: 0;
   overflow: auto;
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
   padding: 5px 0 20px 30px;
-  @include bp(sm){
+  @include bp(sm) {
     top: 60px;
   }
-  &.show{
+  &.show {
     display: block;
   }
-  >.menu-back{
+  > .menu-back {
     display: block;
     padding: 20px 0;
     position: relative;
@@ -1053,9 +1058,9 @@
     line-height: 20px;
     color: $accent;
     border-bottom: 1px solid rgba(77, 76, 76, 0.2);
-    &:before{
+    &:before {
       position: absolute;
-      content: '';
+      content: "";
       border-right: 6px solid $accent;
       border-top: 4px solid transparent;
       border-bottom: 4px solid transparent;
@@ -1064,10 +1069,10 @@
       right: calc(100% + 10px);
     }
   }
-  >ul{
-    >li{
+  > ul {
+    > li {
       border-bottom: 1px solid rgba(77, 76, 76, 0.2);
-      >a{
+      > a {
         padding: 15px 15px 18px 0;
         display: flex;
         align-items: center;
@@ -1076,7 +1081,8 @@
         font-weight: 500;
         color: $black;
         text-decoration: none;
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
           color: $black;
           text-decoration: none;
         }
@@ -1085,23 +1091,23 @@
   }
 }
 
-.mobile-menu__bot{
+.mobile-menu__bot {
   display: flex;
   flex: 1 0 auto;
   align-items: flex-end;
   padding-bottom: 18px;
   margin: 0 -15px;
-  >div{
+  > div {
     width: 100%;
   }
 }
 
-.mobile-menu__contacts{
+.mobile-menu__contacts {
   padding: 30px 15px 25px;
   border-top: 1px solid rgba(77, 76, 76, 0.2);
 }
 
-.mobile-menu__phone{
+.mobile-menu__phone {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -1110,26 +1116,27 @@
   color: $black;
   text-decoration: none;
   margin-bottom: 17px;
-  &:hover, &:focus{
+  &:hover,
+  &:focus {
     text-decoration: none;
   }
-  svg{
+  svg {
     margin-right: 7px;
   }
 }
 
-.mobile-menu__schedule{
+.mobile-menu__schedule {
   font-size: 16px;
   line-height: 140%;
   margin-bottom: 17px;
 }
 
-.mobile-menu__socials{
+.mobile-menu__socials {
   display: flex;
   justify-content: flex-end;
-  li{
+  li {
     margin-left: 10px;
-    a{
+    a {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1137,9 +1144,9 @@
       height: 25px;
       border-radius: 50%;
       background-color: $black;
-      &:hover{
-        svg{
-          path{
+      &:hover {
+        svg {
+          path {
             fill: $accent;
           }
         }
@@ -1148,12 +1155,12 @@
   }
 }
 
-.mobile-menu__location{
+.mobile-menu__location {
   display: flex;
   align-items: center;
   padding: 18px 15px;
   border-top: 1px solid rgba(77, 76, 76, 0.2);
-  span{
+  span {
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -1161,8 +1168,8 @@
     line-height: 20px;
     color: $accent;
     margin-left: 7px;
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       border-top: 6px solid $accent;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
@@ -1171,12 +1178,12 @@
   }
 }
 
-.mobile-menu__search{
+.mobile-menu__search {
   padding: 0 15px;
   margin-top: 12px;
   position: relative;
   width: 100%;
-  input{
+  input {
     width: 100%;
     height: 40px;
     border: none;
@@ -1186,13 +1193,13 @@
     font-size: 14px;
     line-height: 17px;
     padding: 0 40px 0 17px;
-    &:focus{
-      &::placeholder{
+    &:focus {
+      &::placeholder {
         color: transparent;
       }
     }
   }
-  button{
+  button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
