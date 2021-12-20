@@ -30,6 +30,7 @@ var Jscrollpane = require('_modules/jscrollpane');
 var LightGallery = require('_modules/lightgallery');
 var Jslider = require('_modules/jslider');
 var Fancybox = require('_modules/fancybox');
+require('../node_modules/masonry-layout/dist/masonry.pkgd.min');
 //require('../node_modules/sumoselect/jquery.sumoselect.min');
 //import PerfectScrollbar from 'perfect-scrollbar';
 
@@ -224,5 +225,13 @@ $('.gallery .btn').click(function () {
     $('.gallery li').toggleClass('active');
     $(this).toggleClass('active');
 });
+
+// masonry
+
+$('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
 
 
