@@ -13,3 +13,23 @@ $default: "Commissioner";
 // font-size: 14px;
 // line-height: 17px;
 // font-weight: 400;
+//  color: rgba($gray-dark, 0.2);
+
+// &::before {
+//   content: "";
+//   flex-shrink: 0;
+//   width: 10px;
+//   height: 10px;
+//   margin-right: 15px;
+//   margin-left: 5px;
+//   transform: rotate(45deg);
+//   background-color: $accent;
+//   @media (max-width: 991px) {
+//     margin-top: 8px;
+//   }
+//   @media (max-width: 767px) {
+//     margin-right: 10px;
+//     width: 7px;
+//     height: 7px;
+//   }
+// }

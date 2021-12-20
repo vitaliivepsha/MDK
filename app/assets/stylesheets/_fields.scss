@@ -1,74 +1,74 @@
-.fields{
+.fields {
   padding: 30px 0 105px;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 10px 0 55px;
   }
 }
 
-.fields-head{
+.fields-head {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
   margin-bottom: 35px;
-  @include bp(sm){
+  @include bp(sm) {
     flex-direction: column;
   }
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 10px;
   }
-  h1{
+  h1 {
     margin: 0;
     font-weight: 500;
     font-size: 36px;
     line-height: 44px;
     max-width: 66.66666%;
-    @include bp(md){
+    @include bp(md) {
       max-width: 55%;
     }
-    @include bp(sm){
+    @include bp(sm) {
       max-width: 100%;
     }
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 30px;
     }
   }
 }
 
-.fields-controls{
+.fields-controls {
   padding-top: 18px;
   display: flex;
   justify-content: flex-end;
   min-width: 33.33333%;
-  @include bp(md){
+  @include bp(md) {
     min-width: 45%;
   }
-  @include bp(sm){
+  @include bp(sm) {
     width: 100%;
   }
-  @include bp(xs){
+  @include bp(xs) {
     //display: none;
   }
-  .dropdown-wrapper{
+  .dropdown-wrapper {
     position: relative;
     margin-left: 10px;
-    @include bp(xs){
+    @include bp(xs) {
       max-width: calc(50% - 5px);
     }
-    &:first-child{
+    &:first-child {
       margin-left: 0;
     }
-    &.open{
-      .dropdown{
+    &.open {
+      .dropdown {
         border-color: #fff;
         background-color: #fff;
-        >i{
-          &:after{
-            transform: translate(-50%, - 50%) rotate(-180deg);
+        > i {
+          &:after {
+            transform: translate(-50%, -50%) rotate(-180deg);
           }
         }
       }
-      .dropdown-list{
+      .dropdown-list {
         opacity: 1;
         visibility: visible;
         z-index: 1;
@@ -76,7 +76,7 @@
       }
     }
   }
-  .dropdown{
+  .dropdown {
     border: 1px solid rgba($gray-dark, 0.2);
     display: flex;
     align-items: center;
@@ -84,18 +84,18 @@
     cursor: pointer;
     height: 30px;
     padding: 0 15px;
-    transition: linear .3s;
-    &:hover{
+    transition: linear 0.3s;
+    &:hover {
       background-color: #fff;
       border-color: #fff;
     }
-    >span{
+    > span {
       font-weight: 500;
       font-size: 12px;
       line-height: 15px;
       margin-right: 7px;
     }
-    >div{
+    > div {
       max-width: 120px;
       display: flex;
       align-items: center;
@@ -103,10 +103,10 @@
       line-height: 15px;
       color: $gray-dark;
       margin-right: 3px;
-      @include bp(xxs){
+      @include bp(xxs) {
         max-width: 55px;
       }
-      .dropdown-color{
+      .dropdown-color {
         display: flex;
         width: 10px;
         min-width: 10px;
@@ -114,29 +114,29 @@
         border-radius: 50%;
         overflow: hidden;
         margin-right: 4px;
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
-        picture{
+        picture {
           display: flex;
           width: 100%;
           height: 100%;
-          img{
+          img {
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
         }
       }
-      .dropdown-name{
+      .dropdown-name {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
     }
-    >i{
+    > i {
       width: 12px;
       min-width: 12px;
       height: 12px;
@@ -144,12 +144,12 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      &:after{
+      &:after {
         position: absolute;
-        content: '';
+        content: "";
         left: 50%;
         top: 50%;
-        transform: translate(-50%, - 50%);
+        transform: translate(-50%, -50%);
         border-left: 3px solid transparent;
         border-right: 3px solid transparent;
         border-top: 5px solid $black;
@@ -157,7 +157,7 @@
       }
     }
   }
-  .dropdown-list{
+  .dropdown-list {
     opacity: 0;
     visibility: hidden;
     z-index: -1;
@@ -167,14 +167,14 @@
     border-radius: 3px;
     background: #fff;
     filter: drop-shadow(0 10px 20px rgba($black, 0.2));
-    transition: linear .1s;
+    transition: linear 0.1s;
     right: 0;
-    @include bp(xs){
+    @include bp(xs) {
       width: 100%;
       min-width: 110px;
     }
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 100%;
       right: 13px;
@@ -182,41 +182,41 @@
       border-left: 8px solid transparent;
       border-right: 8px solid transparent;
     }
-    ul{
+    ul {
       padding: 10px 15px;
       max-height: 176px;
       overflow: auto;
       &::-webkit-scrollbar {
         overflow-y: scroll;
-        background: #E5E5E5;
+        background: #e5e5e5;
         border-radius: 1px;
         width: 3px;
-        transition: linear .2s;
+        transition: linear 0.2s;
       }
       &::-webkit-scrollbar-thumb {
         background: $gray-dark;
         border-radius: 1px;
         width: 3px;
-        transition: linear .2s;
+        transition: linear 0.2s;
         cursor: grab;
       }
-      li{
+      li {
         margin-bottom: 6px;
-        &:last-child{
+        &:last-child {
           margin-bottom: 0;
         }
-        a{
+        a {
           font-size: 12px;
           line-height: 1;
           text-decoration: none;
           color: $gray-dark;
           display: flex;
           align-items: flex-start;
-          &:hover{
+          &:hover {
             text-decoration: none;
             color: $accent;
           }
-          .dropdown-color{
+          .dropdown-color {
             display: flex;
             width: 10px;
             min-width: 10px;
@@ -225,16 +225,16 @@
             overflow: hidden;
             margin-right: 4px;
             margin-top: 2px;
-            img{
+            img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
-            picture{
+            picture {
               display: flex;
               width: 100%;
               height: 100%;
-              img{
+              img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -247,56 +247,56 @@
   }
 }
 
-.fields-wrapper{
+.fields-wrapper {
   display: flex;
   flex-wrap: wrap;
-  @include bp(sm){
+  @include bp(sm) {
     margin: 0 -10px;
   }
-  .col-xs-12{
+  .col-xs-12 {
     height: inherit;
     margin-bottom: 30px;
-    @include bp(sm){
+    @include bp(sm) {
       padding: 0 10px;
       margin-bottom: 20px;
       width: 50%;
     }
-    @include bp(xs){
+    @include bp(xs) {
       width: 100%;
       margin-bottom: 10px;
     }
   }
 }
 
-.fields-item{
+.fields-item {
   width: 100%;
   height: 100%;
   padding-bottom: 28px;
   border: 1px solid rgba($gray-dark, 0.2);
   display: flex;
   flex-direction: column;
-  transition: linear .2s;
-  @include bp(xs){
+  transition: linear 0.2s;
+  @include bp(xs) {
     padding-bottom: 18px;
   }
-  &:hover{
+  &:hover {
     border-color: #f0f0f0;
     box-shadow: 0 0 20px rgba($gray-dark, 0.2);
   }
 }
 
-.fields-item__pic{
+.fields-item__pic {
   width: 100%;
   height: 210px;
   padding: 24px 25px 0;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 15px 15px 0;
     height: calc(74vw - 60px);
   }
-  >picture{
+  > picture {
     width: 100%;
     height: 100%;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -304,38 +304,38 @@
   }
 }
 
-.fields-item__name{
+.fields-item__name {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
   color: $black;
   text-decoration: none;
   padding: 6px 25px;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 10px 15px;
   }
-  &:hover{
+  &:hover {
     color: $black;
     text-decoration: none;
   }
 }
 
-.fields-item__colors{
+.fields-item__colors {
   padding: 0 25px 10px;
   display: flex;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 0 15px 10px;
   }
-  >span{
+  > span {
     font-size: 12px;
     line-height: 1;
     margin-right: 15px;
     min-width: max-content;
   }
-  >div{
+  > div {
     display: flex;
     flex-wrap: wrap;
-    .color{
+    .color {
       display: flex;
       width: 10px;
       min-width: 10px;
@@ -343,16 +343,16 @@
       border-radius: 50%;
       overflow: hidden;
       margin: 2px 5px 2px 0;
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      picture{
+      picture {
         display: flex;
         width: 100%;
         height: 100%;
-        img{
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
@@ -362,7 +362,7 @@
   }
 }
 
-.fields-item__descr{
+.fields-item__descr {
   padding: 0 25px;
   margin-bottom: 20px;
   max-height: 54px;
@@ -370,31 +370,31 @@
   font-size: 12px;
   line-height: 140%;
   color: $gray-dark;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 0 15px;
     margin-bottom: 24px;
   }
 }
 
-.fields-item__footer{
+.fields-item__footer {
   display: flex;
   align-items: flex-end;
   flex: 1 0 auto;
   padding: 0 25px;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 0 15px;
   }
-  >div{
+  > div {
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 auto;
-    @include bp(xs){
+    @include bp(xs) {
       flex-direction: column;
     }
   }
 }
 
-.fields-item__more{
+.fields-item__more {
   text-decoration: underline;
   cursor: pointer;
   font-size: 12px;
@@ -402,17 +402,17 @@
   color: $black;
   flex: 1 0 auto;
   padding: 6px 10px 6px 0;
-  transition: linear .2s;
-  @include bp(xs){
+  transition: linear 0.2s;
+  @include bp(xs) {
     padding: 0 0 15px 0;
   }
-  &:hover{
+  &:hover {
     text-decoration: underline;
     color: rgba($black, 0.5);
   }
 }
 
-.fields-item__btn{
+.fields-item__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,25 +427,27 @@
   font-size: 10px;
   line-height: 12px;
   text-transform: uppercase;
-  transition: linear .2s;
-  &:after{
-    content: '';
+  transition: linear 0.2s;
+  box-shadow: 0 0 10px rgba($black, 0.35);
+  &:after {
+    content: "";
     margin-left: 10px;
     border-left: 5px solid #fff;
     border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    transition: linear .2s;
+    transition: linear 0.2s;
   }
-  &:hover{
+  &:hover {
     text-decoration: none;
     color: $accent;
     background-color: transparent;
-    &:after{
+    box-shadow: none;
+    &:after {
       border-left-color: $accent;
     }
   }
 }
 
-.fields-footer{
+.fields-footer {
   margin-top: 30px;
 }
