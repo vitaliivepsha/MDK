@@ -218,9 +218,14 @@
         @media (max-width: 767px) {
           column-count: 1;
         }
-        & b {
+        & a {
+          color: $black;
           font-weight: 700;
           text-decoration: underline;
+          &:hover{
+            color: $accent;
+            text-decoration: none;
+          }
           & svg {
             margin-right: 4px;
             margin-left: 10px;
@@ -461,6 +466,18 @@
     @media (max-width: 767px) {
       margin-bottom: 50px;
     }
+    +.consult-section{
+      background-color: #fff;
+      .input, .textarea{
+        border-color: rgba($gray-dark, 0.2);
+      }
+      .btn{
+        box-shadow: 0 0 10px rgba($black, 0.35);
+        &:hover{
+          box-shadow: none;
+        }
+      }
+    }
     & .reviews {
       padding: 0;
       &__head {
@@ -503,13 +520,16 @@
           & + a {
             display: block;
             margin-right: auto;
-            font-size: 14px;
             font-size: 12px;
             line-height: 15px;
             font-weight: 500;
             color: $accent;
             text-decoration: underline;
             text-transform: uppercase;
+            &:hover{
+              text-decoration: none;
+              color: $black;
+            }
           }
         }
       }
@@ -534,7 +554,7 @@
         &.bottom {
           display: none;
           @media (max-width: 767px) {
-            display: block;
+            display: flex;
           }
         }
       }

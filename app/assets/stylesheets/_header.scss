@@ -773,16 +773,14 @@
       background: none;
       &:before {
         top: 0;
-        left: 25%;
-        transform: translateX(-50%);
+        left: 30%;
         width: 12px;
         transform: rotate(45deg);
         transition-delay: 0, 0.3s;
       }
       &:after {
         bottom: 0;
-        left: 25%;
-        transform: translateX(-50%);
+        left: 30%;
         width: 12px;
         transform: rotate(-45deg);
         transition-delay: 0, 0.3s;
