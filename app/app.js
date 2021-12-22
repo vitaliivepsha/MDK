@@ -261,6 +261,7 @@ $('.tabs').each(function() {
 $('.gallery .btn').click(function() {
   $('.gallery li').toggleClass('active');
   $(this).toggleClass('active');
+  $(this).html() == 'смотреть больше фотографий' ? $(this).html('Скрыть фотографии') : $(this).html('смотреть больше фотографий');
 });
 
 // masonry
