@@ -35,6 +35,11 @@ body {
   &.swal2-shown {
     position: static;
   }
+  &.mm-cities{
+    .mobile-menu__cities{
+      transform: translateX(0);
+    }
+  }
 }
 
 ol,
