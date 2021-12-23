@@ -92,6 +92,10 @@
       line-height: 15px;
       font-weight: 500;
       color: $black;
+      &:hover{
+        color: $accent;
+        text-decoration: none;
+      }
       @include bp(sm){
         display: none;
       }
@@ -114,6 +118,10 @@
       line-height: 15px;
       font-weight: 500;
       color: $black;
+      &:hover{
+        color: $accent;
+        text-decoration: none;
+      }
       svg {
         margin-right: 10px;
       }
@@ -144,6 +152,11 @@
 
     & li:hover div {
       box-shadow: 0 4px 10px rgba(17, 17, 17, 0.2);
+    }
+
+    & li:hover h3 {
+      background-color: $accent;
+      color: #fff;
     }
 
     & a {
@@ -186,6 +199,7 @@
       padding: 5px 10px;
       background: #fff;
       box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+      transition: linear .2s;
       @include bp(xs){
         height: 30px;
         padding: 3px 5px;

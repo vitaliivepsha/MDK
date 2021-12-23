@@ -246,48 +246,74 @@
           </svg>
           +8 (000) 000-00-00
         </a>
-        <div class="header-location">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M8 0C4.66904 0 1.96875 2.70028 1.96875 6.03125C1.96875 7.14521 2.18679 8.29575 2.8125 9.125L8 16L13.1875 9.125C13.7558 8.3718 14.0312 7.04025 14.0312 6.03125C14.0313 2.70028 11.331 0 8 0ZM8 3.49316C9.40155 3.49316 10.5381 4.62971 10.5381 6.03124C10.5381 7.4328 9.40155 8.56933 8 8.56933C6.59846 8.56933 5.46192 7.4328 5.46192 6.03125C5.46192 4.62971 6.59846 3.49316 8 3.49316Z"
-              fill="#E53100" />
-          </svg>
-          <span>Москва</span>
-          <div class="header-location__choose">
-            <div class="header-location__choose-inner">
-              <span>Выберите ваш город</span>
-              <div class="city-choose">
-                <ul>
-                  <li class="current"><span>Москва</span></li>
-                  <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
-                  <li><a href="javascript:void(0)">Владивосток</a></li>
-                  <li><a href="javascript:void(0)">Самара</a></li>
-                  <li><a href="javascript:void(0)">Москва</a></li>
-                  <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
-                  <li><a href="javascript:void(0)">Владивосток</a></li>
-                  <li><a href="javascript:void(0)">Пермь</a></li>
-                  <li><a href="javascript:void(0)">Самара</a></li>
-                  <li><a href="javascript:void(0)">Москва</a></li>
-                  <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
-                </ul>
-              </div>
-              <div class="search">
-                <input type="search" placeholder="Поиск населенного пункта">
-              </div>
-              <!-- блок с найденными городами -->
-              <div class="city-found">
-                <ul>
-                  <li><a href="javascript:void(0)">Архангельск</a></li>
-                  <li><a href="javascript:void(0)">Астрахань</a></li>
-                  <li><a href="javascript:void(0)">Балашиха</a></li>
-                  <li><a href="javascript:void(0)">Махачкала</a></li>
-                  <li><a href="javascript:void(0)">Хабаровск</a></li>
-                </ul>
-              </div>
+        <div class="header-location__wrapper">
+            <div class="header-location">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8 0C4.66904 0 1.96875 2.70028 1.96875 6.03125C1.96875 7.14521 2.18679 8.29575 2.8125 9.125L8 16L13.1875 9.125C13.7558 8.3718 14.0312 7.04025 14.0312 6.03125C14.0313 2.70028 11.331 0 8 0ZM8 3.49316C9.40155 3.49316 10.5381 4.62971 10.5381 6.03124C10.5381 7.4328 9.40155 8.56933 8 8.56933C6.59846 8.56933 5.46192 7.4328 5.46192 6.03125C5.46192 4.62971 6.59846 3.49316 8 3.49316Z"
+                  fill="#E53100" />
+              </svg>
+              <span>Москва</span>
+              <div class="header-location__choose">
+                <div class="header-location__choose-inner">
+                  <span>Выберите ваш город</span>
+                  <div class="city-choose">
+                    <ul>
+                      <li class="current"><span>Москва</span></li>
+                      <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+                      <li><a href="javascript:void(0)">Владивосток</a></li>
+                      <li><a href="javascript:void(0)">Самара</a></li>
+                      <li><a href="javascript:void(0)">Москва</a></li>
+                      <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+                      <li><a href="javascript:void(0)">Владивосток</a></li>
+                      <li><a href="javascript:void(0)">Пермь</a></li>
+                      <li><a href="javascript:void(0)">Самара</a></li>
+                      <li><a href="javascript:void(0)">Москва</a></li>
+                      <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+                    </ul>
+                  </div>
+                  <div class="search-wrapper">
+                    <select class="search-select">
+                      <option selected disabled>Поиск населенного пункта</option>
+                      <option>Москва</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Нижний Новгород</option>
+                      <option>Екатеринбург</option>
+                      <option>Казань</option>
+                      <option>Москва</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Нижний Новгород</option>
+                      <option>Екатеринбург</option>
+                      <option>Казань</option>
+                      <option>Москва</option>
+                      <option>Санкт-Петербург</option>
+                      <option>Нижний Новгород</option>
+                      <option>Екатеринбург</option>
+                      <option>Казань</option>
+                    </select>
+                  </div>
+                  <!-- блок с найденными городами -->
+                  <!--<div class="city-found">
+                    <ul>
+                      <li><a href="javascript:void(0)">Архангельск</a></li>
+                      <li><a href="javascript:void(0)">Астрахань</a></li>
+                      <li><a href="javascript:void(0)">Балашиха</a></li>
+                      <li><a href="javascript:void(0)">Махачкала</a></li>
+                      <li><a href="javascript:void(0)">Хабаровск</a></li>
+                    </ul>
+                  </div>-->
 
 
+                </div>
+              </div>
             </div>
-          </div>
+            <div class="header-location__main-city">
+                <span>Ваш город Москва?</span>
+                <div>
+                    <span class="main-city__yes">ДА</span>
+                    <span class="main-city__no">НЕТ</span>
+                </div>
+            </div>
         </div>
 
         <!-- Ваш город Москва? -->
@@ -572,5 +598,46 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="mobile-menu__cities">
+      <span class="menu-back mm-cities__back">
+        <i></i>
+        Выберите ваш город
+      </span>
+      <div class="city-choose">
+          <ul>
+              <li class="current"><span>Москва</span></li>
+              <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+              <li><a href="javascript:void(0)">Владивосток</a></li>
+              <li><a href="javascript:void(0)">Самара</a></li>
+              <li><a href="javascript:void(0)">Москва</a></li>
+              <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+              <li><a href="javascript:void(0)">Владивосток</a></li>
+              <li><a href="javascript:void(0)">Пермь</a></li>
+              <li><a href="javascript:void(0)">Самара</a></li>
+              <li><a href="javascript:void(0)">Москва</a></li>
+              <li><a href="javascript:void(0)">Санкт-Петербург</a></li>
+          </ul>
+      </div>
+      <div class="search-wrapper">
+          <select class="search-select">
+              <option selected disabled>Поиск населенного пункта</option>
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Нижний Новгород</option>
+              <option>Екатеринбург</option>
+              <option>Казань</option>
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Нижний Новгород</option>
+              <option>Екатеринбург</option>
+              <option>Казань</option>
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Нижний Новгород</option>
+              <option>Екатеринбург</option>
+              <option>Казань</option>
+          </select>
+      </div>
   </div>
 </div>
