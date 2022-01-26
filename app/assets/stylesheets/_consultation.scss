@@ -2,7 +2,11 @@
   overflow: hidden;
   .row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+  }
+  &.product {
+    background: #000;
   }
   .consult-contacts {
     background-color: $accent;
@@ -16,7 +20,7 @@
     &:before {
       position: absolute;
       content: "";
-      right: 100%;
+      right: calc(100% - 1px);
       top: 0;
       width: 50vw;
       height: 100%;
@@ -140,6 +144,7 @@
     display: block;
     margin-bottom: 24px;
     max-width: 420px;
+    text-align: center;
     @include bp(xs) {
       font-size: 21px;
       line-height: 26px;
@@ -155,6 +160,7 @@
     font-size: 14px;
     line-height: 17px;
     color: #ffffff;
+    text-align: center;
   }
 
   .consult-form {
@@ -203,7 +209,7 @@
       padding-top: 30px;
     }
     &.bg-gray {
-      background: transparent;
+      background-color: $accent;
       ::selection {
         background: rgba($accent, 0.5);
       }
@@ -268,11 +274,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom: 300px;
+        padding-bottom: 30px;
       }
-      @include bp(xs) {
-        padding-bottom: 280px;
-      }
+
       .row {
         @include bp(xs) {
           max-width: 100%;
@@ -355,11 +359,9 @@
       }
     }
     .consult-form__wrapper {
-      padding-left: 40px;
       padding-top: 0;
       padding-bottom: 0;
       @include bp(lg) {
-        padding-left: 40px;
         display: block;
       }
       @include bp(sm) {

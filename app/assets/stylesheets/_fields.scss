@@ -361,18 +361,21 @@
     }
   }
 }
-
+// ===============
 .fields-item__descr {
+  margin-bottom: 5px;
   padding: 0 25px;
-  margin-bottom: 20px;
-  max-height: 54px;
+  max-height: 50px;
   overflow: hidden;
   font-size: 12px;
   line-height: 140%;
   color: $gray-dark;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   @include bp(xs) {
     padding: 0 15px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 }
 
@@ -381,28 +384,24 @@
   align-items: flex-end;
   flex: 1 0 auto;
   padding: 0 25px;
+  & > div {
+    width: 100%;
+  }
   @include bp(xs) {
     padding: 0 15px;
-  }
-  > div {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    @include bp(xs) {
-      flex-direction: column;
-    }
   }
 }
 
 .fields-item__more {
-  text-decoration: underline;
-  cursor: pointer;
+  display: flex;
+  flex: 1 0 auto;
+  margin-bottom: 25px;
   font-size: 12px;
   line-height: 15px;
   color: $black;
-  flex: 1 0 auto;
-  padding: 6px 10px 6px 0;
+  text-decoration: underline;
   transition: linear 0.2s;
+  cursor: pointer;
   @include bp(xs) {
     padding: 0 0 15px 0;
   }
@@ -416,19 +415,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid $accent;
-  color: #fff;
-  background-color: $accent;
-  text-decoration: none;
-  cursor: pointer;
-  width: 86px;
+  width: 100%;
+  max-width: 200px;
   height: 30px;
+  margin: 0 auto;
+  border: 1px solid $accent;
+  background-color: $accent;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
+  text-decoration: none !important;
+  color: #fff !important;
   text-transform: uppercase;
   transition: linear 0.2s;
   box-shadow: 0 0 10px rgba($black, 0.35);
+  cursor: pointer;
   &:after {
     content: "";
     margin-left: 10px;
@@ -439,7 +440,7 @@
   }
   &:hover {
     text-decoration: none;
-    color: $accent;
+    color: $accent !important;
     background-color: transparent;
     box-shadow: none;
     &:after {
@@ -447,7 +448,7 @@
     }
   }
 }
-
+// ===============
 .fields-footer {
   margin-top: 30px;
 }

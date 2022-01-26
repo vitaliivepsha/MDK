@@ -5,7 +5,7 @@
     font-size: 36px;
     line-height: 44px;
     color: $black;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 26px;
       margin-top: 15px;
@@ -14,7 +14,7 @@
   }
   & .location-section {
     padding-bottom: 85px;
-    @include bp(xs){
+    @include bp(xs) {
       padding-bottom: 50px;
     }
   }
@@ -23,7 +23,7 @@
     flex-wrap: wrap;
     gap: 65px;
     margin-bottom: 20px;
-    @include bp(xs){
+    @include bp(xs) {
       gap: 20px;
       margin-bottom: 0;
     }
@@ -32,7 +32,7 @@
       max-width: 445px;
       max-height: 300px;
       overflow: hidden;
-      @include bp(xs){
+      @include bp(xs) {
         width: 100%;
         height: calc(70vw - 30px);
       }
@@ -47,7 +47,7 @@
       }
       & iframe {
         border: none;
-        @include bp(xs){
+        @include bp(xs) {
           width: 100%;
           height: 100%;
         }
@@ -57,7 +57,7 @@
     &__address {
       padding-top: 12px;
       position: relative;
-      @include bp(xs){
+      @include bp(xs) {
         padding-top: 0;
       }
       & h3 {
@@ -67,7 +67,7 @@
         line-height: 32px;
         font-weight: 500;
         color: $black;
-        @include bp(xs){
+        @include bp(xs) {
           font-size: 21px;
           line-height: 26px;
         }
@@ -79,7 +79,7 @@
         line-height: 20px;
         font-weight: 500;
         color: $black;
-        @include bp(xs){
+        @include bp(xs) {
           margin-bottom: 15px;
         }
         & svg {
@@ -92,7 +92,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 50px;
-      @include bp(xs){
+      @include bp(xs) {
         gap: 15px;
       }
     }
@@ -133,7 +133,7 @@
     flex-wrap: wrap;
     max-width: 470px;
     margin-top: 20px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-top: 30px;
     }
     & li {
@@ -148,96 +148,96 @@
     }
   }
 
-  & .other-section {
-    padding: 85px 0 100px;
-    background-color: $black;
-    @include bp(xs){
-      padding: 45px 0;
-    }
-    .other__parts{
-      padding-top: 10px;
-      @include bp(xs){
-        padding: 0;
-      }
-    }
-    & p {
-      width: fit-content;
-      margin-bottom: 52px;
-      font-size: 30px;
-      line-height: 37px;
-      font-weight: 500;
-      color: #fff;
-      position: relative;
-      @include bp(xs){
-        font-size: 21px;
-        line-height: 26px;
-        margin-bottom: 60px;
-      }
-      &:after{
-        position: absolute;
-        content: '';
-        width: 87px;
-        height: 2px;
-        left: 0;
-        top: calc(100% + 17px);
-        background-color: #fff;
-        @include bp(xs){
-          top: calc(100% + 28px);
-        }
-      }
-    }
-    & li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-      @include bp(xs){
-        margin-bottom: 15px;
-      }
-      &::before {
-        content: "";
-        width: 7px;
-        height: 7px;
-        margin-right: 16px;
-        transform: rotate(45deg);
-        background-color: $accent;
-      }
-    }
-    & li a {
-      display: flex;
-      align-items: center;
-      font-size: 16px;
-      line-height: 20px;
-      color: #fff;
-      text-decoration: none;
-      &:after{
-        content: '>>';
-        color: $accent;
-        margin-left: 10px;
-      }
-      &:hover {
-        color: $accent;
-      }
-    }
-    & .other {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    .other__img{
-      width: 546px;
-      height: 367px;
-      @include bp(md){
-        margin: 0 auto;
-      }
-      @include bp(xs){
-        width: calc(100vw - 30px);
-        height: calc(70vw - 30px);
-      }
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
+  // & .other-section {
+  //   padding: 85px 0 100px;
+  //   background-color: $black;
+  //   @include bp(xs){
+  //     padding: 45px 0;
+  //   }
+  //   .other__parts{
+  //     padding-top: 10px;
+  //     @include bp(xs){
+  //       padding: 0;
+  //     }
+  //   }
+  //   & p {
+  //     width: fit-content;
+  //     margin-bottom: 52px;
+  //     font-size: 30px;
+  //     line-height: 37px;
+  //     font-weight: 500;
+  //     color: #fff;
+  //     position: relative;
+  //     @include bp(xs){
+  //       font-size: 21px;
+  //       line-height: 26px;
+  //       margin-bottom: 60px;
+  //     }
+  //     &:after{
+  //       position: absolute;
+  //       content: '';
+  //       width: 87px;
+  //       height: 2px;
+  //       left: 0;
+  //       top: calc(100% + 17px);
+  //       background-color: #fff;
+  //       @include bp(xs){
+  //         top: calc(100% + 28px);
+  //       }
+  //     }
+  //   }
+  //   & li {
+  //     display: flex;
+  //     align-items: center;
+  //     margin-bottom: 10px;
+  //     @include bp(xs){
+  //       margin-bottom: 15px;
+  //     }
+  //     &::before {
+  //       content: "";
+  //       width: 7px;
+  //       height: 7px;
+  //       margin-right: 16px;
+  //       transform: rotate(45deg);
+  //       background-color: $accent;
+  //     }
+  //   }
+  //   & li a {
+  //     display: flex;
+  //     align-items: center;
+  //     font-size: 16px;
+  //     line-height: 20px;
+  //     color: #fff;
+  //     text-decoration: none;
+  //     &:after{
+  //       content: '>>';
+  //       color: $accent;
+  //       margin-left: 10px;
+  //     }
+  //     &:hover {
+  //       color: $accent;
+  //     }
+  //   }
+  //   & .other {
+  //     display: flex;
+  //     flex-wrap: wrap;
+  //     gap: 30px;
+  //   }
+  //   .other__img{
+  //     width: 546px;
+  //     height: 367px;
+  //     @include bp(md){
+  //       margin: 0 auto;
+  //     }
+  //     @include bp(xs){
+  //       width: calc(100vw - 30px);
+  //       height: calc(70vw - 30px);
+  //     }
+  //     img{
+  //       width: 100%;
+  //       height: 100%;
+  //       object-fit: contain;
+  //     }
+  //   }
+  // }
 }
