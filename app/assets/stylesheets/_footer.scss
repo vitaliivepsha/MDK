@@ -24,11 +24,11 @@
       margin-right: 15px;
       margin-bottom: 30px;
     }
-    img{
+    img {
       width: 244px;
       height: 102px;
       object-fit: contain;
-      @include bp(xs){
+      @include bp(xs) {
         width: 143px;
         height: 60px;
       }
@@ -41,7 +41,7 @@
       line-height: 56px;
       color: #ffffff;
       text-decoration: none;
-      @include bp(xs){
+      @include bp(xs) {
         margin-bottom: 15px;
       }
     }
@@ -101,7 +101,7 @@
       }
       & li a {
         &:hover {
-          color: $accent;
+          text-decoration: underline;
         }
       }
     }
