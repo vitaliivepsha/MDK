@@ -1,42 +1,42 @@
-.article{
+.article {
   padding: 45px 0 105px;
-  @include bp(xs){
+  @include bp(xs) {
     padding: 10px 0 55px;
   }
 }
 
-.article-main{
+.article-main {
   width: 725px;
   max-width: 100%;
   margin: 0 auto 75px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 60px;
   }
-  h1{
+  h1 {
     margin: 0;
     font-weight: 500;
     font-size: 36px;
     line-height: 44px;
     text-align: center;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 26px;
     }
   }
 }
 
-.article-pic{
+.article-pic {
   width: 100%;
   height: 305px;
   margin-top: 25px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-top: 20px;
     height: calc(63vw - 30px);
   }
-  picture{
+  picture {
     width: 100%;
     height: 100%;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -44,109 +44,110 @@
   }
 }
 
-.article-text{
+.article-text {
   padding-bottom: 50px;
   margin-top: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid $gray-dark;
   font-size: 16px;
   line-height: 140%;
-  @include bp(xs){
+  @include bp(xs) {
     font-size: 14px;
     margin-top: 20px;
     margin-bottom: 25px;
     padding-bottom: 40px;
   }
-  >*{
-    &:last-child{
+  > * {
+    &:last-child {
       margin: 0;
     }
   }
-  h2, h3{
+  h2,
+  h3 {
     margin-top: 30px;
     margin-bottom: 20px;
     font-weight: 500;
     font-size: 26px;
     line-height: 32px;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 18px;
       line-height: 26px;
       margin-top: 20px;
       margin-bottom: 15px;
     }
   }
-  p{
+  p {
     margin-bottom: 20px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-bottom: 15px;
     }
   }
-  ul{
+  ul {
     list-style-type: disc;
     padding-left: 18px;
     margin-bottom: 20px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-bottom: 15px;
     }
   }
-  ol{
+  ol {
     list-style-type: decimal;
     padding-left: 18px;
     margin-bottom: 20px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-bottom: 15px;
     }
   }
-  a{
+  a {
     color: $accent;
     text-decoration: underline;
-    &:hover{
+    &:hover {
       color: $accent;
       text-decoration: none;
     }
   }
 }
 
-.article-date{
+.article-date {
   text-align: right;
   font-size: 14px;
   line-height: 17px;
-  @include bp(xs){
+  @include bp(xs) {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-.last-articles__head{
+.last-articles__head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
-  >span{
+  > span {
     display: flex;
     align-items: center;
     font-weight: 500;
     font-size: 21px;
     line-height: 26px;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 18px;
       line-height: 22px;
     }
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       display: block;
       margin-right: 10px;
       transform: rotate(45deg);
       width: 10px;
       height: 10px;
       background-color: $accent;
-      @include bp(xs){
+      @include bp(xs) {
         width: 8px;
         height: 8px;
       }
     }
   }
-  >a{
+  > a {
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -154,64 +155,64 @@
     font-weight: 500;
     color: $black;
     text-decoration: none;
-    @include bp(xs){
+    @include bp(xs) {
       display: none;
     }
-    &:hover{
+    &:hover {
       color: $black;
       text-decoration: underline;
     }
-    svg{
+    svg {
       margin-right: 10px;
     }
   }
 }
 
-.last-articles{
+.last-articles {
   display: flex;
   flex-wrap: wrap;
-  .col-xs-12{
+  .col-xs-12 {
     height: inherit;
     margin-bottom: 30px;
-    @include bp(sm){
+    @include bp(sm) {
       padding: 0 10px;
       margin-bottom: 20px;
       width: 50%;
     }
-    @include bp(xs){
+    @include bp(xs) {
       width: 100%;
       margin-bottom: 10px;
     }
-    &:last-child{
-      @include bp(md){
+    &:last-child {
+      @include bp(md) {
         display: none;
       }
-      @include bp(xs){
+      @include bp(xs) {
         display: block;
       }
     }
   }
-  .blog-item{
+  .blog-item {
     min-height: 300px;
-    @include bp(sm){
+    @include bp(sm) {
       min-height: 230px;
     }
   }
-  .blog-item__descr{
+  .blog-item__descr {
     max-height: 168px;
-    @include bp(sm){
+    @include bp(sm) {
       max-height: 84px;
     }
   }
 }
 
-.last-articles__footer{
+.last-articles__footer {
   display: none;
   margin-top: 25px;
-  @include bp(xs){
+  @include bp(xs) {
     display: flex;
   }
-  >a{
+  > a {
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -219,11 +220,11 @@
     font-weight: 500;
     color: $black;
     text-decoration: none;
-    &:hover{
+    &:hover {
       color: $black;
       text-decoration: underline;
     }
-    svg{
+    svg {
       margin-right: 10px;
     }
   }

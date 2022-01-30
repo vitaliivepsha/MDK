@@ -48,7 +48,7 @@
   display: flex;
   justify-content: flex-end;
   padding: 2px 0;
-  border-top: 1px solid rgba(77, 76, 76, 0.2);
+  border-top: 1px solid rgba($gray-dark, 0.2);
   @include bp(sm) {
     padding: 0 0 12px;
     justify-content: flex-start;
@@ -86,8 +86,8 @@
   display: flex;
   align-items: center;
   height: 30px;
-  background: #c4c4c4;
-  border: 1px solid #c4c4c4;
+  background: $gray-silver;
+  border: 1px solid $gray-silver;
   border-radius: 50px;
   padding: 0 10px;
   font-size: 10px;
@@ -128,7 +128,7 @@
       background-color: rgba($black, 0.5);
       svg {
         path {
-          fill: #fff;
+          fill: $white;
         }
       }
     }
@@ -136,15 +136,15 @@
 }
 
 .catalog-filter {
-  border-top: 1px solid rgba(77, 76, 76, 0.2);
+  border-top: 1px solid rgba($gray-dark, 0.2);
   max-height: 286px;
   overflow: auto;
   &:last-child {
-    border-bottom: 1px solid rgba(77, 76, 76, 0.2);
+    border-bottom: 1px solid rgba($gray-dark, 0.2);
   }
   &::-webkit-scrollbar {
     overflow-y: scroll;
-    background: #e5e5e5;
+    background: $gray-middle;
     border-radius: 1px;
     width: 3px;
     transition: linear 0.2s;
@@ -327,7 +327,7 @@
   height: calc(100% - 255px);
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: $white;
   padding: 10px 10px 15px;
   @include bp(lg) {
     height: calc(100% - 312px);
@@ -405,14 +405,14 @@
   width: 100%;
   height: 100vh;
   z-index: 101;
-  background: #e5e5e5;
+  background: $gray-middle;
 }
 
 .mobile-filters__head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: $white;
   height: 60px;
   padding: 15px;
   > div {
@@ -437,7 +437,7 @@
   justify-content: center;
   width: 30px;
   height: 30px;
-  background: #f6f6f6;
+  background: $gray-light;
   border-radius: 3px;
   svg {
     width: 12px;
@@ -463,7 +463,7 @@
   }
   &::-webkit-scrollbar {
     overflow-y: scroll;
-    background: #e5e5e5;
+    background: $gray-middle;
     border-radius: 1px;
     width: 3px;
     transition: linear 0.2s;

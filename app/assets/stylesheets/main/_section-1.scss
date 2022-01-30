@@ -36,13 +36,15 @@
 }
 
 .main-left {
+  position: relative;
+  z-index: 100;
   > span {
     display: block;
     max-width: 470px;
     font-size: 54px;
     line-height: 66px;
     font-weight: 500;
-    color: #fff;
+    color: $white;
     margin-bottom: 36px;
     @media (max-width: 991px) {
       font-size: 30px;
@@ -96,7 +98,7 @@
     display: flex;
     align-items: center;
     margin-right: 40px;
-    color: #fff;
+    color: $white;
     & i {
       flex-shrink: 0;
       display: flex;

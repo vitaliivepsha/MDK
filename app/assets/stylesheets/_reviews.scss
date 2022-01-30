@@ -1,51 +1,51 @@
-.reviews{
+.reviews {
   padding: 45px 0 105px;
-  @include bp(sm){
+  @include bp(sm) {
     padding-top: 25px;
   }
-  @include bp(xs){
+  @include bp(xs) {
     padding-top: 10px;
   }
 }
 
-.reviews-top{
+.reviews-top {
   display: flex;
   align-items: flex-end;
   margin-bottom: 45px;
-  @include bp(sm){
+  @include bp(sm) {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 30px;
   }
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 20px;
   }
-  h1{
+  h1 {
     margin: 0;
     font-weight: 500;
     font-size: 36px;
     line-height: 44px;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 30px;
     }
   }
-  span{
+  span {
     font-weight: 500;
     font-size: 36px;
     line-height: 44px;
     padding: 0 25px 0 35px;
-    @include bp(sm){
+    @include bp(sm) {
       padding-left: 20px;
       padding-right: 0;
     }
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 30px;
       padding-left: 4px;
     }
   }
-  small{
+  small {
     cursor: pointer;
     font-weight: 500;
     font-size: 12px;
@@ -55,52 +55,52 @@
     text-decoration: underline;
     top: -5px;
     position: relative;
-    @include bp(sm){
+    @include bp(sm) {
       width: 100%;
       text-align: left;
       top: auto;
       margin-top: 5px;
     }
-    @include bp(xs){
+    @include bp(xs) {
       margin-top: 10px;
       text-decoration: none;
     }
-    &:hover{
+    &:hover {
       text-decoration: none;
       color: $black;
     }
   }
 }
 
-.reviews-wrapper{
-  border-top: 1px solid rgba(77, 76, 76, 0.2);
+.reviews-wrapper {
+  border-top: 1px solid rgba($gray-dark, 0.2);
 }
 
-.review-item{
-  border-bottom: 1px solid rgba(77, 76, 76, 0.2);
+.review-item {
+  border-bottom: 1px solid rgba($gray-dark, 0.2);
   padding: 30px 50px 30px 24px;
   display: flex;
   flex-wrap: wrap;
-  @include bp(sm){
+  @include bp(sm) {
     padding: 20px 0;
   }
-  @include bp(xs){
+  @include bp(xs) {
     padding: 25px 0 30px;
   }
 }
 
-.review-pic{
+.review-pic {
   width: 200px;
   height: 200px;
   overflow: hidden;
-  @include bp(xs){
+  @include bp(xs) {
     width: 100%;
     height: calc(72vw - 30px);
   }
-  picture{
+  picture {
     width: 100%;
     height: 100%;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -108,74 +108,74 @@
   }
 }
 
-.review-info{
+.review-info {
   width: calc(100% - 200px);
   padding-left: 62px;
   padding-top: 18px;
-  @include bp(sm){
+  @include bp(sm) {
     padding-left: 30px;
     padding-top: 0;
   }
-  @include bp(xs){
+  @include bp(xs) {
     width: 100%;
     padding-top: 20px;
     padding-left: 0;
   }
-  .rating-stars{
+  .rating-stars {
     margin-bottom: 30px;
-    @include bp(sm){
+    @include bp(sm) {
       margin-bottom: 20px;
     }
-    @include bp(xs){
+    @include bp(xs) {
       margin-bottom: 10px;
     }
   }
 }
 
-.review-date{
+.review-date {
   display: block;
   margin-bottom: 20px;
   font-size: 10px;
   line-height: 12px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 10px;
   }
 }
 
-.review-descr{
+.review-descr {
   font-size: 14px;
   line-height: 150%;
   color: $gray-dark;
   margin-bottom: 20px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 10px;
   }
-  *{
-    &:last-child{
+  * {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 }
 
-.rating-author{
+.rating-author {
   font-size: 14px;
   line-height: 17px;
 }
 
-.rating-stars{
+.rating-stars {
   display: flex;
-  .rating-star{
+  .rating-star {
     margin-right: 5px;
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
   }
 }
 
-.rating-star{
+.rating-star {
   display: flex;
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     width: 14px;
     height: 14px;
     -webkit-mask: url("../images/icons/star-empty.svg");
@@ -188,8 +188,8 @@
     mask-size: contain;
     background-color: $accent;
   }
-  &.active{
-    &:before{
+  &.active {
+    &:before {
       -webkit-mask: url("../images/icons/star-full.svg");
       mask: url("../images/icons/star-full.svg");
       -webkit-mask-position: center;
@@ -212,7 +212,7 @@
 
 .rating > label:before {
   display: block;
-  content: '';
+  content: "";
   width: 14px;
   height: 14px;
   -webkit-mask: url("../images/icons/star-empty.svg");
@@ -262,7 +262,7 @@
   mask-size: contain;
 }
 
-.reviews-footer{
+.reviews-footer {
   display: flex;
   justify-content: center;
   padding-top: 45px;

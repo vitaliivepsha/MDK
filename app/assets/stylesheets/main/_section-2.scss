@@ -12,13 +12,13 @@
     padding: 40px 0;
   }
   &.marble {
-    background-color: #f0f0f0;
+    background-color: $gray;
     & .products__pic {
       right: -100px;
     }
   }
   &.granite {
-    background-color: #fff;
+    background-color: $white;
     & .products__pic {
       left: -112px;
       right: auto;
@@ -152,12 +152,12 @@
     }
 
     & li:hover div {
-      box-shadow: 0 4px 10px rgba(17, 17, 17, 0.2);
+      box-shadow: 0 4px 10px rgba($black, 0.2);
     }
 
     & li:hover h3 {
       background-color: $accent;
-      color: #fff;
+      color: $white;
     }
 
     & a {
@@ -198,8 +198,8 @@
       justify-content: center;
       text-align: center;
       padding: 5px 10px;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+      background-color: $white;
+      box-shadow: 0 0 10px rgba($black, 0);
       transition: linear 0.2s;
       @include bp(xs) {
         height: 30px;
