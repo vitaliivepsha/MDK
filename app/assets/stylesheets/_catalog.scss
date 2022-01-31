@@ -1,10 +1,13 @@
 .catalog {
   padding: 30px 0 150px;
+  padding-bottom: 0;
   @include bp(sm) {
     padding: 20px 0 75px;
+    padding-bottom: 0;
   }
   @include bp(xs) {
     padding: 10px 0 50px;
+    padding-bottom: 0;
   }
 }
 
@@ -28,8 +31,10 @@
 
 .catalog-wrapper {
   display: flex;
+  margin-bottom: 145px;
   @include bp(sm) {
     display: block;
+    margin-bottom: 52px;
   }
 }
 

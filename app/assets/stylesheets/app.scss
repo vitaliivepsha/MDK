@@ -35,8 +35,8 @@ body {
   &.swal2-shown {
     position: static;
   }
-  &.mm-cities{
-    .mobile-menu__cities{
+  &.mm-cities {
+    .mobile-menu__cities {
       transform: translateX(0);
     }
   }
@@ -104,7 +104,7 @@ main {
   &.err {
     .input,
     .textarea {
-      border-color: $black;
+      border-color: $accent;
     }
     &:after {
       position: absolute;
@@ -272,8 +272,6 @@ main {
 
 // Contacts
 @import "contacts";
-// About Us
-@import "about";
 // Product
 @import "product";
 // Reviews

@@ -61,6 +61,7 @@
     max-width: 255px;
     width: 100%;
     box-shadow: 0 0 10px rgba($black, 0.35);
+    color: $white;
     @media (max-width: 991px) {
       max-width: 180px;
     }

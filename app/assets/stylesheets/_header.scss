@@ -203,7 +203,6 @@
             gap: 5px;
             padding-left: 20px;
             padding-top: 5px;
-
             & input {
               display: none;
 
@@ -223,15 +222,16 @@
                   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
                 }
               }
-              &:checked + label {
+              & + label svg {
+                margin-right: 7px;
+              }
+            }
+            & > li.active {
+              & input + label {
                 border: 1px solid $accent;
                 color: $black;
                 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
                 cursor: pointer;
-              }
-
-              & + label svg {
-                margin-right: 7px;
               }
             }
           }
@@ -242,6 +242,9 @@
           padding-left: 30px;
           & ul {
             column-width: 110px;
+            &.active {
+              display: block;
+            }
           }
 
           & li {

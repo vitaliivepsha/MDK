@@ -52,6 +52,8 @@
       & a {
         max-width: 255px;
         margin-bottom: 48px;
+        color: $white;
+        box-shadow: 0 0 10px rgba($black, 0.35);
         @include bp(xs) {
           max-width: 160px;
           height: 40px;

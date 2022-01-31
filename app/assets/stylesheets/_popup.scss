@@ -1,9 +1,8 @@
-.mfp-bg{
+.mfp-bg {
   background: rgba(255, 255, 255, 0.6);
 }
 
-
-.popup{
+.popup {
   position: relative;
   margin: 0 auto;
   max-width: calc(100vw - 30px);
@@ -11,23 +10,23 @@
   box-shadow: 0 0 30px rgba(17, 17, 17, 0.2);
   max-height: 100vh;
   overflow: auto;
-  &.reviews-popup{
+  &.reviews-popup {
     width: 960px;
     padding: 68px 62px 100px;
-    @include bp(sm){
+    @include bp(sm) {
       padding: 50px 30px;
     }
-    @include bp(xs){
+    @include bp(xs) {
       padding: 40px 15px 30px;
     }
-    .popup-title{
+    .popup-title {
       margin-bottom: 28px;
-      @include bp(xs){
+      @include bp(xs) {
         margin-bottom: 24px;
       }
     }
   }
-  .mfp-close{
+  .mfp-close {
     width: 24px;
     height: 24px;
     right: 30px;
@@ -38,19 +37,19 @@
     padding: 0;
     opacity: 1;
     cursor: pointer;
-    @include bp(xs){
+    @include bp(xs) {
       right: 10px;
       top: 10px;
     }
-    svg{
+    svg {
       pointer-events: none;
-      path{
-        transition: linear .2s;
+      path {
+        transition: linear 0.2s;
       }
     }
-    &:hover{
-      svg{
-        path{
+    &:hover {
+      svg {
+        path {
           fill: $accent;
         }
       }
@@ -58,69 +57,70 @@
   }
 }
 
-.popup-title{
+.popup-title {
   display: block;
   text-align: center;
   font-weight: 500;
   font-size: 36px;
   line-height: 44px;
-  @include bp(xs){
+  @include bp(xs) {
     font-size: 21px;
     line-height: 26px;
   }
 }
 
-.reviews-popup__rating{
+.reviews-popup__rating {
   display: flex;
   justify-content: center;
   margin-bottom: 42px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-bottom: 30px;
   }
-  >span{
+  > span {
     margin-right: 25px;
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-.reviews-popup__form{
-  .textarea{
+.reviews-popup__form {
+  .textarea {
     height: 112px;
-    @include bp(xs){
+    @include bp(xs) {
       height: 122px;
     }
   }
-  .btn{
+  .btn {
     box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
     width: 402px;
     max-width: 100%;
     margin: 35px auto 0;
-    @include bp(xs){
+    color: $white;
+    @include bp(xs) {
       margin-top: 25px;
     }
   }
 }
 
-.reviews-popup__form-wrapper{
+.reviews-popup__form-wrapper {
   display: flex;
   justify-content: space-between;
-  @include bp(xs){
+  @include bp(xs) {
     flex-direction: column;
   }
-  >div{
+  > div {
     width: calc(50% - 15px);
-    @include bp(xs){
+    @include bp(xs) {
       width: 100%;
     }
-    .input-wrapper{
+    .input-wrapper {
       margin-bottom: 20px;
-      @include bp(xs){
+      @include bp(xs) {
         margin-bottom: 10px;
       }
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
-        @include bp(xs){
+        @include bp(xs) {
           margin-bottom: 10px;
         }
       }
@@ -128,18 +128,18 @@
   }
 }
 
-.reviews-popup__form-upload{
+.reviews-popup__form-upload {
   display: flex;
   justify-content: center;
   margin-top: 30px;
-  @include bp(xs){
+  @include bp(xs) {
     margin-top: 0;
   }
-  .input-file{
+  .input-file {
     cursor: pointer;
     width: 345px;
     max-width: 100%;
-    >label{
+    > label {
       font-weight: 400;
       margin-bottom: 0;
       width: 100%;
@@ -147,21 +147,21 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      &:hover{
-        svg{
-          path{
+      &:hover {
+        svg {
+          path {
             fill: $accent;
           }
         }
-        span{
+        span {
           color: $accent;
         }
       }
-      >svg{
+      > svg {
         min-width: 11px;
         margin-right: 15px;
       }
-      span{
+      span {
         font-weight: 400;
         font-size: 12px;
         line-height: 15px;
@@ -170,13 +170,13 @@
         text-overflow: ellipsis;
       }
     }
-    input{
+    input {
       display: none;
     }
   }
 }
 
-.swal2-modal{
+.swal2-modal {
   width: 536px;
   max-width: calc(100vw - 30px);
   background: #fff;
@@ -184,13 +184,13 @@
   max-height: 100vh;
   overflow: auto;
   border-radius: 0;
-  @include bp(xs){
+  @include bp(xs) {
     position: fixed !important;
     top: 0 !important;
     max-width: 100vw;
     padding: 60px 26px !important;
   }
-  .swal2-title{
+  .swal2-title {
     font-family: $default !important;
     font-weight: 500;
     font-size: 36px;
@@ -201,7 +201,7 @@
     color: $black;
     position: relative;
   }
-  .swal2-content{
+  .swal2-content {
     font-family: $default !important;
     font-weight: normal;
     color: $black;
@@ -209,12 +209,12 @@
     line-height: 24px;
     text-align: center;
   }
-  .swal2-buttonswrapper{
+  .swal2-buttonswrapper {
     margin-top: 0;
   }
-  .swal2-styled{
+  .swal2-styled {
     display: none !important;
-    &.swal2-cancel{
+    &.swal2-cancel {
       display: block !important;
       width: 24px;
       height: 24px;
@@ -232,6 +232,6 @@
   }
 }
 
-.swal2-icon{
+.swal2-icon {
   display: none !important;
 }
