@@ -56,7 +56,7 @@
     }
   }
 
-  .consult-contacts__item {
+  & .consult-contacts__item {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -218,6 +218,7 @@
       }
     }
   }
+
   &:not(.consult-main) {
     background-color: $accent;
     padding: 35px 0 40px;
@@ -444,6 +445,30 @@
           color: #fff;
         }
       }
+    }
+  }
+}
+
+.consult-main {
+  & .btn {
+    color: #ffffff;
+  }
+  & a.consult-contacts__item:hover {
+    & i svg path {
+      fill: #fff;
+    }
+    & span {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  & div.consult-contacts__item:hover {
+    & i svg path {
+      fill: #fff;
+    }
+    & span {
+      color: #fff;
+      text-decoration: none;
     }
   }
 }

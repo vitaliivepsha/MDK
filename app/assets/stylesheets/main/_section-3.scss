@@ -18,11 +18,11 @@
     &__pic {
       width: 508px;
       height: 393px;
-      margin-top: 47px;
+      padding-top: 47px;
       @include bp(xs) {
-        width: calc(100vw - 50px);
+        width: calc(100vw - 30px);
         height: calc(75vw - 30px);
-        margin-top: 0;
+        padding-top: 0;
       }
       & img {
         width: 100%;
@@ -51,7 +51,7 @@
 
       & a {
         max-width: 255px;
-        margin-bottom: 48px;
+        margin-bottom: 57px;
         color: $white;
         box-shadow: 0 0 10px rgba($black, 0.35);
         @include bp(xs) {
@@ -89,30 +89,49 @@
 
     &__list {
       position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      row-gap: 5px;
-      height: 175px;
-      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
       max-width: 540px;
-      padding-bottom: 15px;
+      padding-bottom: 26px;
       border-bottom: 1px solid $black;
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 15px;
-        background-color: $gray;
+      @media (max-width: 575px) {
+        grid-gap: 10px;
+        grid-row-gap: 15px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media (max-width: 460px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      & .production__item:not(:nth-child(-n + 4)) {
+        display: none;
+      }
+      & .production__item:not(:nth-child(-n + 3)) {
+        @media (max-width: 575px) {
+          display: none;
+        }
+      }
+      & .production__item:not(:nth-child(-n + 2)) {
+        @media (max-width: 460px) {
+          display: none;
+        }
       }
     }
 
     &__list.active {
-      min-height: 175px;
-      height: auto;
-      overflow: visible;
+      & .production__item:not(:nth-child(-n + 4)) {
+        display: block;
+      }
+      & .production__item:not(:nth-child(-n + 3)) {
+        @media (max-width: 575px) {
+          display: block;
+        }
+      }
+      & .production__item:not(:nth-child(-n + 2)) {
+        @media (max-width: 460px) {
+          display: block;
+        }
+      }
     }
 
     &__item a {
@@ -129,21 +148,22 @@
     }
 
     &__item:hover img {
-      box-shadow: 0 2px 10px rgba($black, 0);
+      box-shadow: 0 2px 10px rgba($black, 0.2);
     }
 
     &__item-pic {
       margin-bottom: 7px;
-      width: 120px;
-      height: 120px;
+      width: 100%;
+      height: auto;
       & img {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
       }
     }
 
     &__item p {
+      margin: 0;
       font-size: 16px;
       line-height: 20px;
       transition: linear 0.2s;

@@ -119,14 +119,10 @@
           text-decoration: none;
           @media (max-width: 480px) {
             font-size: 11px;
-            margin-right: 10px;
           }
           &::after {
             content: "|";
             width: 1px;
-            @media (max-width: 480px) {
-              display: none;
-            }
           }
           &:hover {
             text-decoration: underline;
