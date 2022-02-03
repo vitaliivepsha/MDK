@@ -1,7 +1,10 @@
 .product {
   display: flex;
   flex-direction: column;
-  margin-right: 15px;
+  @media (max-width: 767px) {
+    overflow: hidden;
+  }
+
   & h1 {
     margin: 0;
     margin-top: 20px;
@@ -348,9 +351,15 @@
             & b {
               font-size: 14px;
               text-decoration: none;
+              @media (max-width: 575px) {
+                width: 27%;
+              }
             }
             & span {
               color: $gray-dark;
+              @media (max-width: 575px) {
+                width: 73%;
+              }
             }
           }
         }
@@ -532,6 +541,12 @@
 
   & .reviews-section {
     margin-bottom: 70px;
+    & .container {
+      @media (max-width: 767px) {
+        margin-right: -15px;
+        padding-left: 0;
+      }
+    }
     @media (max-width: 767px) {
       margin-bottom: 50px;
     }
@@ -636,20 +651,22 @@
         display: flex;
         gap: 20px;
         justify-content: space-between;
+
         @media (max-width: 767px) {
-          margin-bottom: 20px;
           gap: 15px;
+          margin-bottom: 20px;
+          padding-right: 15px;
           overflow-x: auto;
         }
 
         & .reviews__item {
           width: 100%;
+          min-width: 190px;
           max-width: 350px;
           min-height: 300px;
           padding: 32px;
           background-color: $white;
           min-width: 190px;
-
           @media (max-width: 991px) {
             padding: 15px;
           }
