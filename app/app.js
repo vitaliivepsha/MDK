@@ -15,6 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/catalog.html');
     require('./assets/templates/layouts/sitemap.html');
+    require('./assets/templates/layouts/policy.html');
 }
 
 // Depends
