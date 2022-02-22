@@ -1,0 +1,76 @@
+.delivery {
+  & h1 {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: $black;
+    @media (max-width: 767px) {
+      margin-top: 18px;
+      margin-bottom: 18px;
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+  & ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+    @media (max-width: 767px) {
+      display: block;
+      margin-bottom: 34px;
+    }
+
+    & li {
+      width: 50%;
+      margin-bottom: 20px;
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.delivery-item {
+  display: flex;
+
+  & i {
+    display: flex;
+    justify-content: center;
+    width: 47px;
+    flex-shrink: 0;
+    @media (max-width: 767px) {
+      width: auto;
+      margin-right: 10px;
+    }
+  }
+  & > div {
+    & span {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black;
+      @media (max-width: 767px) {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    & p {
+      max-width: 472px;
+      margin: 0;
+      font-size: 16px;
+      line-height: 140%;
+      color: $black;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}
