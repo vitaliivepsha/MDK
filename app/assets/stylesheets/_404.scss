@@ -1,62 +1,62 @@
-.nf-main{
+.nf-main {
   display: flex;
   flex-wrap: wrap;
   padding: 75px 0 175px;
-  @include bp(md){
+  @include bp(md) {
     flex-direction: column;
     align-items: center;
     padding-bottom: 100px;
   }
-  @include bp(xs){
+  @include bp(xs) {
     padding: 40px 0 65px;
   }
 }
 
-.nf-text{
+.nf-text {
   padding-top: 8px;
   padding-left: 65px;
-  @include bp(md){
+  @include bp(md) {
     padding: 0;
     margin: 0 auto 40px;
     width: 420px;
     max-width: 100%;
   }
-  >picture{
+  > picture {
     display: block;
     max-width: 100%;
     margin-bottom: 40px;
-    img{
+    img {
       max-width: 100%;
       object-fit: contain;
     }
   }
-  >span{
+  > span {
     display: block;
     font-weight: 500;
     font-size: 32px;
     line-height: 39px;
     margin-bottom: 18px;
-    @include bp(xs){
+    @include bp(xs) {
       font-size: 21px;
       line-height: 26px;
       margin-bottom: 15px;
     }
   }
-  >p{
+  > p {
     font-size: 16px;
     line-height: 130%;
     margin-bottom: 13px;
     max-width: 420px;
-    @include bp(xs){
+    @include bp(xs) {
       margin-bottom: 10px;
     }
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
-    a{
+    a {
       color: $accent;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         color: $accent;
         text-decoration: none;
       }
@@ -64,18 +64,20 @@
   }
 }
 
-.nf-pic{
+.nf-pic {
   display: flex;
   justify-content: flex-end;
-  @include bp(md){
+  @include bp(md) {
     justify-content: center;
   }
-  >picture{
+  > picture {
     display: block;
     max-width: 100%;
-    img{
+    img {
       max-width: 100%;
       object-fit: contain;
     }
   }
 }
+
+// дужкшмьущпрвашп уашп

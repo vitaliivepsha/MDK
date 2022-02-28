@@ -26,6 +26,41 @@
       }
     }
   }
+  // order
+  &.order-popup {
+    width: 960px;
+    padding: 68px 62px 100px;
+    @include bp(sm) {
+      padding: 50px 30px;
+    }
+    @include bp(xs) {
+      padding: 40px 15px 30px;
+    }
+    .popup-title {
+      margin-bottom: 56px;
+      @include bp(xs) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  // consult
+  &.consult-popup {
+    width: 960px;
+    padding: 68px 62px 100px;
+    @include bp(sm) {
+      padding: 50px 30px;
+    }
+    @include bp(xs) {
+      padding: 40px 15px 30px;
+    }
+    .popup-title {
+      margin-bottom: 56px;
+      @include bp(xs) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
   .mfp-close {
     width: 24px;
     height: 24px;
@@ -172,6 +207,92 @@
     }
     input {
       display: none;
+    }
+  }
+}
+
+// order
+.order-popup__form {
+  .textarea {
+    // overflow: hidden;
+    height: 46px;
+    padding: 14px 16px;
+    @include bp(xs) {
+      height: 122px;
+    }
+  }
+  .btn {
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+    width: 402px;
+    max-width: 100%;
+    margin: 35px auto 0;
+    color: $white;
+    @include bp(xs) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.order-popup__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
+  > div {
+    width: calc(50% - 15px);
+    @include bp(xs) {
+      width: 100%;
+    }
+    .input-wrapper {
+      margin-bottom: 20px;
+      @include bp(xs) {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include bp(xs) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// consult
+.consult-popup__form {
+  .btn {
+    box-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+    width: 402px;
+    max-width: 100%;
+    margin: 30px auto 0;
+    color: $white;
+    @include bp(xs) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.consult-popup__form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  > div {
+    width: calc(50% - 15px);
+    @include bp(xs) {
+      width: 100%;
+    }
+    & .input-wrapper {
+      margin-bottom: 20px;
+      @include bp(xs) {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include bp(xs) {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }

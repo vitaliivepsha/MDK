@@ -33,6 +33,7 @@ body {
     }
   }
   &.swal2-shown {
+    display: block;
     position: static;
   }
   &.mm-cities {
