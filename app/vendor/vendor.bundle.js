@@ -12797,11 +12797,10 @@ var vendor_lib =
 	                        if (typeof form.data('success-title') !== 'undefined' || typeof form.data('success-message') !== 'undefined') {
 	                            swal({
 	                                showCancelButton: true,
-	                                timer: 3000000,
+	                                timer: 30000,
 	                                showCloseButton: true,
 	                                focusConfirm: true,
-	                                confirmButton: true,
-	                                confirmButtonText: 'Yes, delete it!'
+	                                confirmButton: true
 	                            });
 	                            swal(form.data('success-title'), form.data('success-message'), 'success').then(() => {
 	                                location.reload(true);
