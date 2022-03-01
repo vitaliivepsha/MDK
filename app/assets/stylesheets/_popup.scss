@@ -298,18 +298,19 @@
 }
 
 .swal2-modal {
-  width: 536px;
+  width: 960px !important;
   max-width: calc(100vw - 30px);
   background: #fff;
-  padding: 60px 54px 54px !important;
+  padding: 40px 15px 30px;
+  padding-top: 68px !important;
+  padding-bottom: 140px !important;
   max-height: 100vh;
   overflow: auto;
   border-radius: 0;
   @include bp(xs) {
     position: fixed !important;
-    top: 0 !important;
-    max-width: 100vw;
-    padding: 60px 26px !important;
+    max-width: calc(100vw - 30px);
+    padding: 67px 26px !important;
   }
   .swal2-title {
     font-family: $default !important;
@@ -318,17 +319,29 @@
     line-height: 44px;
     display: block;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
     color: $black;
     position: relative;
+    @media (max-width: 574px) {
+      margin-bottom: 25px;
+      font-size: 21px !important;
+      line-height: 26px !important;
+    }
   }
   .swal2-content {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 35px;
     font-family: $default !important;
     font-weight: normal;
     color: $black;
-    font-size: 15px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
+    @media (max-width: 574px) {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }
   .swal2-buttonswrapper {
     margin-top: 0;
@@ -349,6 +362,49 @@
       font-size: 0;
       opacity: 1;
       padding: 0;
+    }
+  }
+
+  .swal2-styled {
+    display: none !important;
+  }
+
+  & .swal2-close {
+    display: block !important;
+    color: $black !important;
+    width: 65px !important;
+    height: 68px !important;
+    font-weight: 600;
+    @media (max-width: 574px) {
+      width: 48px !important;
+      height: 48px !important;
+      font-size: 28px !important;
+    }
+  }
+  & .swal2-confirm {
+    display: block !important;
+    width: 100%;
+    max-width: 403px;
+    margin: 0 auto !important;
+    height: 50px;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: 0px 0px 10px rgba(17, 17, 17, 0.3) !important;
+    background-color: #4c1c1c !important;
+    cursor: pointer;
+    font-size: 0 !important;
+      line-height: 0 !important;
+    padding: 5px 10px !important;
+
+    &::before {
+      content: "ХОРОШО";
+      font-size: 12px !important;
+      line-height: 15px !important;
+      font-weight: 500;
+text-transform: uppercase;
+    }
+    &:hover {
+      background-color: $accent;
     }
   }
 }

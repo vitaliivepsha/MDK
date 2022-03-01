@@ -35,7 +35,7 @@ var LightGallery = require('_modules/lightgallery');
 require('../node_modules/masonry-layout/dist/masonry.pkgd.min');
 require('../node_modules/sumoselect/jquery.sumoselect.min');
 //import PerfectScrollbar from 'perfect-scrollbar';
-
+import Swal from 'sweetalert2';
 // Stylesheet entrypoint
 require('_stylesheets/app.scss');
 
@@ -189,6 +189,8 @@ $(function () {
 });
 
 
+
+
 $('.production__wrap .btn-more').click(function () {
     $('.production__list').toggleClass('active');
     $(this).toggleClass('active');
@@ -245,7 +247,6 @@ $(document).on('click', '.mobile-menu', function (e) {
     e.stopPropagation();
 });
 
-
 // mobile menu list
 
 $('.mobile-menu__list .has-children.lvl1 > span').click(function () {
@@ -295,5 +296,10 @@ $('.grid').masonry({
     columnWidth: '.grid-sizer',
     percentPosition: true
 });
+
+
+
+
+
 
 
